@@ -90,6 +90,7 @@
 		0346F2561D680A0800A28BC7 = {
 			isa = PBXGroup;
 			children = (
+				038BB07E1D6A506800FEBDD0 /* include */,
 				03D02A521D6A43AE0008BBE4 /* Readme */,
 				0346F2AB1D68167800A28BC7 /* Utils */,
 				0346F27A1D68115C00A28BC7 /* Engine core code */,
@@ -125,21 +126,12 @@
 			name = dependencies;
 			sourceTree = "<group>";
 		};
-		0346F2711D680CC600A28BC7 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				0346F27B1D6811F300A28BC7 /* Wolfie.h */,
-			);
-			name = include;
-			sourceTree = "<group>";
-		};
 		0346F27A1D68115C00A28BC7 /* Engine core code */ = {
 			isa = PBXGroup;
 			children = (
 				0346F2A41D68163900A28BC7 /* shader program */,
 				0346F2A11D68151100A28BC7 /* core */,
 				0346F28C1D6814BA00A28BC7 /* Buffers */,
-				0346F2711D680CC600A28BC7 /* include */,
 			);
 			name = "Engine core code";
 			sourceTree = "<group>";
@@ -196,6 +188,14 @@
 				0346F2A81D68166A00A28BC7 /* Timer.h */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		038BB07E1D6A506800FEBDD0 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				0346F27B1D6811F300A28BC7 /* Wolfie.h */,
+			);
+			name = include;
 			sourceTree = "<group>";
 		};
 		03D02A521D6A43AE0008BBE4 /* Readme */ = {
