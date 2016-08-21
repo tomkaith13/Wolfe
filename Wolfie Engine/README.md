@@ -1,4 +1,4 @@
-# Wolfie Engine
+# Wolfie Game Engine
 A game engine written using openGL using Xcode.
 The programming language is C++.
 
