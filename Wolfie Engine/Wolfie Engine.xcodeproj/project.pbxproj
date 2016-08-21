@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0346F2631D680A0800A28BC7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0346F2621D680A0800A28BC7 /* main.cpp */; };
+		0346F26B1D680C3200A28BC7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0346F26A1D680C3200A28BC7 /* OpenGL.framework */; };
+		0346F26D1D680C6F00A28BC7 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0346F26C1D680C6F00A28BC7 /* libglfw.3.2.dylib */; };
+		0346F26F1D680C8A00A28BC7 /* libGLEW.1.13.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0346F26E1D680C8A00A28BC7 /* libGLEW.1.13.0.dylib */; };
+		0346F2891D6814B200A28BC7 /* Buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0346F2831D6814B200A28BC7 /* Buffer.cpp */; };
+		0346F28A1D6814B200A28BC7 /* ElementBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0346F2851D6814B200A28BC7 /* ElementBuffer.cpp */; };
+		0346F28B1D6814B200A28BC7 /* VertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0346F2871D6814B200A28BC7 /* VertexArray.cpp */; };
+		0346F29B1D68150600A28BC7 /* BatchRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0346F28D1D68150600A28BC7 /* BatchRenderer.cpp */; };
+		0346F29C1D68150600A28BC7 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0346F2911D68150600A28BC7 /* Shader.cpp */; };
+		0346F29D1D68150600A28BC7 /* Simple2Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0346F2941D68150600A28BC7 /* Simple2Renderer.cpp */; };
+		0346F29E1D68150600A28BC7 /* SimpleSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0346F2951D68150600A28BC7 /* SimpleSprite.cpp */; };
+		0346F29F1D68150600A28BC7 /* Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0346F2971D68150600A28BC7 /* Sprite.cpp */; };
+		0346F2A01D68150600A28BC7 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0346F2991D68150600A28BC7 /* Window.cpp */; };
+		0346F2A91D68166A00A28BC7 /* fileutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0346F2A51D68166A00A28BC7 /* fileutils.cpp */; };
+		0346F2AA1D68166A00A28BC7 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0346F2A71D68166A00A28BC7 /* Timer.cpp */; };
+		03D02A541D6A43BC0008BBE4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 03D02A531D6A43BC0008BBE4 /* README.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0346F25D1D680A0800A28BC7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0346F25F1D680A0800A28BC7 /* Wolfie Engine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Wolfie Engine"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0346F2621D680A0800A28BC7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0346F26A1D680C3200A28BC7 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		0346F26C1D680C6F00A28BC7 /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = /usr/local/lib/libglfw.3.2.dylib; sourceTree = "<absolute>"; };
+		0346F26E1D680C8A00A28BC7 /* libGLEW.1.13.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.1.13.0.dylib; path = /usr/local/lib/libGLEW.1.13.0.dylib; sourceTree = "<absolute>"; };
+		0346F27B1D6811F300A28BC7 /* Wolfie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Wolfie.h; path = "Wolfie Engine/Wolfie.h"; sourceTree = "<group>"; };
+		0346F2831D6814B200A28BC7 /* Buffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Buffer.cpp; path = "Wolfie Engine/Engine/Buffers/Buffer.cpp"; sourceTree = "<group>"; };
+		0346F2841D6814B200A28BC7 /* Buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Buffer.h; path = "Wolfie Engine/Engine/Buffers/Buffer.h"; sourceTree = "<group>"; };
+		0346F2851D6814B200A28BC7 /* ElementBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ElementBuffer.cpp; path = "Wolfie Engine/Engine/Buffers/ElementBuffer.cpp"; sourceTree = "<group>"; };
+		0346F2861D6814B200A28BC7 /* ElementBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ElementBuffer.h; path = "Wolfie Engine/Engine/Buffers/ElementBuffer.h"; sourceTree = "<group>"; };
+		0346F2871D6814B200A28BC7 /* VertexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VertexArray.cpp; path = "Wolfie Engine/Engine/Buffers/VertexArray.cpp"; sourceTree = "<group>"; };
+		0346F2881D6814B200A28BC7 /* VertexArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VertexArray.h; path = "Wolfie Engine/Engine/Buffers/VertexArray.h"; sourceTree = "<group>"; };
+		0346F28D1D68150600A28BC7 /* BatchRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BatchRenderer.cpp; path = "Wolfie Engine/Engine/core/BatchRenderer.cpp"; sourceTree = "<group>"; };
+		0346F28E1D68150600A28BC7 /* BatchRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BatchRenderer.h; path = "Wolfie Engine/Engine/core/BatchRenderer.h"; sourceTree = "<group>"; };
+		0346F28F1D68150600A28BC7 /* Renderable2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderable2D.h; path = "Wolfie Engine/Engine/core/Renderable2D.h"; sourceTree = "<group>"; };
+		0346F2901D68150600A28BC7 /* Renderer2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderer2D.h; path = "Wolfie Engine/Engine/core/Renderer2D.h"; sourceTree = "<group>"; };
+		0346F2911D68150600A28BC7 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Shader.cpp; path = "Wolfie Engine/Engine/core/Shader.cpp"; sourceTree = "<group>"; };
+		0346F2921D68150600A28BC7 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shader.h; path = "Wolfie Engine/Engine/core/Shader.h"; sourceTree = "<group>"; };
+		0346F2931D68150600A28BC7 /* Simple2DRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Simple2DRenderer.h; path = "Wolfie Engine/Engine/core/Simple2DRenderer.h"; sourceTree = "<group>"; };
+		0346F2941D68150600A28BC7 /* Simple2Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Simple2Renderer.cpp; path = "Wolfie Engine/Engine/core/Simple2Renderer.cpp"; sourceTree = "<group>"; };
+		0346F2951D68150600A28BC7 /* SimpleSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SimpleSprite.cpp; path = "Wolfie Engine/Engine/core/SimpleSprite.cpp"; sourceTree = "<group>"; };
+		0346F2961D68150600A28BC7 /* SimpleSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleSprite.h; path = "Wolfie Engine/Engine/core/SimpleSprite.h"; sourceTree = "<group>"; };
+		0346F2971D68150600A28BC7 /* Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Sprite.cpp; path = "Wolfie Engine/Engine/core/Sprite.cpp"; sourceTree = "<group>"; };
+		0346F2981D68150600A28BC7 /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sprite.h; path = "Wolfie Engine/Engine/core/Sprite.h"; sourceTree = "<group>"; };
+		0346F2991D68150600A28BC7 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Window.cpp; path = "Wolfie Engine/Engine/core/Window.cpp"; sourceTree = "<group>"; };
+		0346F29A1D68150600A28BC7 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Window.h; path = "Wolfie Engine/Engine/core/Window.h"; sourceTree = "<group>"; };
+		0346F2A21D68163600A28BC7 /* frag.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = frag.shader; path = "Wolfie Engine/Engine/Shader Sources/frag.shader"; sourceTree = "<group>"; };
+		0346F2A31D68163600A28BC7 /* vertex.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = vertex.shader; path = "Wolfie Engine/Engine/Shader Sources/vertex.shader"; sourceTree = "<group>"; };
+		0346F2A51D68166A00A28BC7 /* fileutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fileutils.cpp; path = "Wolfie Engine/Engine/Utils/fileutils.cpp"; sourceTree = "<group>"; };
+		0346F2A61D68166A00A28BC7 /* fileutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fileutils.h; path = "Wolfie Engine/Engine/Utils/fileutils.h"; sourceTree = "<group>"; };
+		0346F2A71D68166A00A28BC7 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = "Wolfie Engine/Engine/Utils/Timer.cpp"; sourceTree = "<group>"; };
+		0346F2A81D68166A00A28BC7 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Timer.h; path = "Wolfie Engine/Engine/Utils/Timer.h"; sourceTree = "<group>"; };
+		03D02A531D6A43BC0008BBE4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0346F25C1D680A0800A28BC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0346F26F1D680C8A00A28BC7 /* libGLEW.1.13.0.dylib in Frameworks */,
+				0346F26D1D680C6F00A28BC7 /* libglfw.3.2.dylib in Frameworks */,
+				0346F26B1D680C3200A28BC7 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0346F2561D680A0800A28BC7 = {
+			isa = PBXGroup;
+			children = (
+				03D02A521D6A43AE0008BBE4 /* Readme */,
+				0346F2AB1D68167800A28BC7 /* Utils */,
+				0346F27A1D68115C00A28BC7 /* Engine core code */,
+				0346F2701D680C9B00A28BC7 /* dependencies */,
+				0346F26A1D680C3200A28BC7 /* OpenGL.framework */,
+				0346F2611D680A0800A28BC7 /* Wolfie Engine */,
+				0346F2601D680A0800A28BC7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0346F2601D680A0800A28BC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0346F25F1D680A0800A28BC7 /* Wolfie Engine */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0346F2611D680A0800A28BC7 /* Wolfie Engine */ = {
+			isa = PBXGroup;
+			children = (
+				0346F2621D680A0800A28BC7 /* main.cpp */,
+			);
+			path = "Wolfie Engine";
+			sourceTree = "<group>";
+		};
+		0346F2701D680C9B00A28BC7 /* dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				0346F26E1D680C8A00A28BC7 /* libGLEW.1.13.0.dylib */,
+				0346F26C1D680C6F00A28BC7 /* libglfw.3.2.dylib */,
+			);
+			name = dependencies;
+			sourceTree = "<group>";
+		};
+		0346F2711D680CC600A28BC7 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				0346F27B1D6811F300A28BC7 /* Wolfie.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		0346F27A1D68115C00A28BC7 /* Engine core code */ = {
+			isa = PBXGroup;
+			children = (
+				0346F2A41D68163900A28BC7 /* shader program */,
+				0346F2A11D68151100A28BC7 /* core */,
+				0346F28C1D6814BA00A28BC7 /* Buffers */,
+				0346F2711D680CC600A28BC7 /* include */,
+			);
+			name = "Engine core code";
+			sourceTree = "<group>";
+		};
+		0346F28C1D6814BA00A28BC7 /* Buffers */ = {
+			isa = PBXGroup;
+			children = (
+				0346F2831D6814B200A28BC7 /* Buffer.cpp */,
+				0346F2841D6814B200A28BC7 /* Buffer.h */,
+				0346F2851D6814B200A28BC7 /* ElementBuffer.cpp */,
+				0346F2861D6814B200A28BC7 /* ElementBuffer.h */,
+				0346F2881D6814B200A28BC7 /* VertexArray.h */,
+				0346F2871D6814B200A28BC7 /* VertexArray.cpp */,
+			);
+			name = Buffers;
+			sourceTree = "<group>";
+		};
+		0346F2A11D68151100A28BC7 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				0346F28D1D68150600A28BC7 /* BatchRenderer.cpp */,
+				0346F28E1D68150600A28BC7 /* BatchRenderer.h */,
+				0346F28F1D68150600A28BC7 /* Renderable2D.h */,
+				0346F2901D68150600A28BC7 /* Renderer2D.h */,
+				0346F2911D68150600A28BC7 /* Shader.cpp */,
+				0346F2921D68150600A28BC7 /* Shader.h */,
+				0346F2931D68150600A28BC7 /* Simple2DRenderer.h */,
+				0346F2941D68150600A28BC7 /* Simple2Renderer.cpp */,
+				0346F2951D68150600A28BC7 /* SimpleSprite.cpp */,
+				0346F2961D68150600A28BC7 /* SimpleSprite.h */,
+				0346F2971D68150600A28BC7 /* Sprite.cpp */,
+				0346F2981D68150600A28BC7 /* Sprite.h */,
+				0346F2991D68150600A28BC7 /* Window.cpp */,
+				0346F29A1D68150600A28BC7 /* Window.h */,
+			);
+			name = core;
+			sourceTree = "<group>";
+		};
+		0346F2A41D68163900A28BC7 /* shader program */ = {
+			isa = PBXGroup;
+			children = (
+				0346F2A21D68163600A28BC7 /* frag.shader */,
+				0346F2A31D68163600A28BC7 /* vertex.shader */,
+			);
+			name = "shader program";
+			sourceTree = "<group>";
+		};
+		0346F2AB1D68167800A28BC7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0346F2A51D68166A00A28BC7 /* fileutils.cpp */,
+				0346F2A61D68166A00A28BC7 /* fileutils.h */,
+				0346F2A71D68166A00A28BC7 /* Timer.cpp */,
+				0346F2A81D68166A00A28BC7 /* Timer.h */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		03D02A521D6A43AE0008BBE4 /* Readme */ = {
+			isa = PBXGroup;
+			children = (
+				03D02A531D6A43BC0008BBE4 /* README.md */,
+			);
+			name = Readme;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0346F25E1D680A0800A28BC7 /* Wolfie Engine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0346F2661D680A0800A28BC7 /* Build configuration list for PBXNativeTarget "Wolfie Engine" */;
+			buildPhases = (
+				0346F25B1D680A0800A28BC7 /* Sources */,
+				0346F25C1D680A0800A28BC7 /* Frameworks */,
+				0346F25D1D680A0800A28BC7 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Wolfie Engine";
+			productName = "Wolfie Engine";
+			productReference = 0346F25F1D680A0800A28BC7 /* Wolfie Engine */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0346F2571D680A0800A28BC7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = tomkaith13;
+				TargetAttributes = {
+					0346F25E1D680A0800A28BC7 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 0346F25A1D680A0800A28BC7 /* Build configuration list for PBXProject "Wolfie Engine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0346F2561D680A0800A28BC7;
+			productRefGroup = 0346F2601D680A0800A28BC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0346F25E1D680A0800A28BC7 /* Wolfie Engine */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0346F25B1D680A0800A28BC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0346F2631D680A0800A28BC7 /* main.cpp in Sources */,
+				0346F2A01D68150600A28BC7 /* Window.cpp in Sources */,
+				0346F28B1D6814B200A28BC7 /* VertexArray.cpp in Sources */,
+				0346F2AA1D68166A00A28BC7 /* Timer.cpp in Sources */,
+				0346F29E1D68150600A28BC7 /* SimpleSprite.cpp in Sources */,
+				0346F28A1D6814B200A28BC7 /* ElementBuffer.cpp in Sources */,
+				0346F29B1D68150600A28BC7 /* BatchRenderer.cpp in Sources */,
+				0346F29C1D68150600A28BC7 /* Shader.cpp in Sources */,
+				0346F29D1D68150600A28BC7 /* Simple2Renderer.cpp in Sources */,
+				0346F2891D6814B200A28BC7 /* Buffer.cpp in Sources */,
+				03D02A541D6A43BC0008BBE4 /* README.md in Sources */,
+				0346F29F1D68150600A28BC7 /* Sprite.cpp in Sources */,
+				0346F2A91D68166A00A28BC7 /* fileutils.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0346F2641D680A0800A28BC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0346F2651D680A0800A28BC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0346F2671D680A0800A28BC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"../Wolfie\\ Engine/**",
+					"/usr/local/include/**",
+				);
+				LIBRARY_SEARCH_PATHS = "/usr/local/lib/**";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0346F2681D680A0800A28BC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"../Wolfie\\ Engine/**",
+					"/usr/local/include/**",
+				);
+				LIBRARY_SEARCH_PATHS = "/usr/local/lib/**";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0346F25A1D680A0800A28BC7 /* Build configuration list for PBXProject "Wolfie Engine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0346F2641D680A0800A28BC7 /* Debug */,
+				0346F2651D680A0800A28BC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0346F2661D680A0800A28BC7 /* Build configuration list for PBXNativeTarget "Wolfie Engine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0346F2671D680A0800A28BC7 /* Debug */,
+				0346F2681D680A0800A28BC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0346F2571D680A0800A28BC7 /* Project object */;
+}
