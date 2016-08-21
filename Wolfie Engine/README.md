@@ -5,6 +5,7 @@ The programming language is C++.
 Prequisites:
 glfw, and glew dynlib are built using cmake and make 
 and added to the appropriate paths mentioned in the xcodeproj files.
+(For e.g, this project has all its library and header file in /usr/local/include)
 
 User also needs to manually add glm headers to the search path.
 
