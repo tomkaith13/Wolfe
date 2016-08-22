@@ -22,7 +22,7 @@
 		0346F2A01D68150600A28BC7 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0346F2991D68150600A28BC7 /* Window.cpp */; };
 		0346F2A91D68166A00A28BC7 /* fileutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0346F2A51D68166A00A28BC7 /* fileutils.cpp */; };
 		0346F2AA1D68166A00A28BC7 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0346F2A71D68166A00A28BC7 /* Timer.cpp */; };
-		03D02A541D6A43BC0008BBE4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 03D02A531D6A43BC0008BBE4 /* README.md */; };
+		038BB0861D6A900F00FEBDD0 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 038BB0851D6A900F00FEBDD0 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -70,7 +70,7 @@
 		0346F2A61D68166A00A28BC7 /* fileutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fileutils.h; path = "Wolfie Engine/Engine/Utils/fileutils.h"; sourceTree = "<group>"; };
 		0346F2A71D68166A00A28BC7 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = "Wolfie Engine/Engine/Utils/Timer.cpp"; sourceTree = "<group>"; };
 		0346F2A81D68166A00A28BC7 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Timer.h; path = "Wolfie Engine/Engine/Utils/Timer.h"; sourceTree = "<group>"; };
-		03D02A531D6A43BC0008BBE4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		038BB0851D6A900F00FEBDD0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,7 +201,7 @@
 		03D02A521D6A43AE0008BBE4 /* Readme */ = {
 			isa = PBXGroup;
 			children = (
-				03D02A531D6A43BC0008BBE4 /* README.md */,
+				038BB0851D6A900F00FEBDD0 /* README.md */,
 			);
 			name = Readme;
 			sourceTree = "<group>";
@@ -272,7 +272,7 @@
 				0346F29C1D68150600A28BC7 /* Shader.cpp in Sources */,
 				0346F29D1D68150600A28BC7 /* Simple2Renderer.cpp in Sources */,
 				0346F2891D6814B200A28BC7 /* Buffer.cpp in Sources */,
-				03D02A541D6A43BC0008BBE4 /* README.md in Sources */,
+				038BB0861D6A900F00FEBDD0 /* README.md in Sources */,
 				0346F29F1D68150600A28BC7 /* Sprite.cpp in Sources */,
 				0346F2A91D68166A00A28BC7 /* fileutils.cpp in Sources */,
 			);
