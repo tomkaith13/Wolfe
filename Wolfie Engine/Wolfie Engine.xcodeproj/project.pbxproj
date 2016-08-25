@@ -23,6 +23,7 @@
 		0346F2A91D68166A00A28BC7 /* fileutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0346F2A51D68166A00A28BC7 /* fileutils.cpp */; };
 		0346F2AA1D68166A00A28BC7 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0346F2A71D68166A00A28BC7 /* Timer.cpp */; };
 		038BB0861D6A900F00FEBDD0 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 038BB0851D6A900F00FEBDD0 /* README.md */; };
+		03FF53661D6E7FA700FCE9B6 /* test-sprite-floor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03FF53651D6E7FA700FCE9B6 /* test-sprite-floor.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,6 +72,7 @@
 		0346F2A71D68166A00A28BC7 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = "Wolfie Engine/Engine/Utils/Timer.cpp"; sourceTree = "<group>"; };
 		0346F2A81D68166A00A28BC7 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Timer.h; path = "Wolfie Engine/Engine/Utils/Timer.h"; sourceTree = "<group>"; };
 		038BB0851D6A900F00FEBDD0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		03FF53651D6E7FA700FCE9B6 /* test-sprite-floor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "test-sprite-floor.cpp"; path = "Wolfie Engine/Sample/test-sprite-floor.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		0346F2561D680A0800A28BC7 = {
 			isa = PBXGroup;
 			children = (
+				03FF53671D6E800D00FCE9B6 /* test-samples */,
 				038BB07E1D6A506800FEBDD0 /* include */,
 				03D02A521D6A43AE0008BBE4 /* Readme */,
 				0346F2AB1D68167800A28BC7 /* Utils */,
@@ -206,6 +209,14 @@
 			name = Readme;
 			sourceTree = "<group>";
 		};
+		03FF53671D6E800D00FCE9B6 /* test-samples */ = {
+			isa = PBXGroup;
+			children = (
+				03FF53651D6E7FA700FCE9B6 /* test-sprite-floor.cpp */,
+			);
+			name = "test-samples";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0346F2631D680A0800A28BC7 /* main.cpp in Sources */,
+				03FF53661D6E7FA700FCE9B6 /* test-sprite-floor.cpp in Sources */,
 				0346F2A01D68150600A28BC7 /* Window.cpp in Sources */,
 				0346F28B1D6814B200A28BC7 /* VertexArray.cpp in Sources */,
 				0346F2AA1D68166A00A28BC7 /* Timer.cpp in Sources */,

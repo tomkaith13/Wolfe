@@ -1,5 +1,5 @@
 //
-//  main.cpp
+//  These files are created by tweaking the values present in main.
 //  Wolfie
 //
 //  Created by BIBIN THOMAS on 7/11/16.
@@ -13,7 +13,7 @@
 #define BATCH_RENDERER
 #define FPS_VIEWER
 
-int main(void)
+int sprite_floor_test()
 {
     GLuint shaderProgID;
     Window engineWindow("Wolfie", 1000, 1200);
@@ -141,13 +141,13 @@ int main(void)
         //renderer.submit(&sprite1);
         //renderer.submit(&sprite2);
         //renderer.submit(&sprite3);
-         
+        
         
         
         for(auto sprite : spriteVec) {
             renderer.submit(&sprite);
         }
-         
+        
         renderer.end();
 #else
         renderer.submit(&sprite1);
