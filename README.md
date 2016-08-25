@@ -1,6 +1,6 @@
 # Wolfie Game Engine
 A game engine written using openGL using Xcode.
-The programming language is C++.
+The programming language is C++11.
 
 Prequisites:
 glfw, and glew dynlib are built using cmake and make 
