@@ -14,7 +14,7 @@
 #define BATCH_RENDERER
 #define FPS_VIEWER
 
-int main(void)
+int max_sprite_test(void)
 {
     GLuint shaderProgID;
     Window engineWindow("Wolfie", 800, 1000);
@@ -142,13 +142,13 @@ int main(void)
         //renderer.submit(&sprite1);
         //renderer.submit(&sprite2);
         //renderer.submit(&sprite3);
-         
+        
         
         
         for(auto sprite : spriteVec) {
             renderer.submit(&sprite);
         }
-         
+        
         renderer.end();
 #else
         renderer.submit(&sprite1);
