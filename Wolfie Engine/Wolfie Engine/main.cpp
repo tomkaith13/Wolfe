@@ -1,5 +1,6 @@
 //
-//  main.cpp
+//  main.cpp - This file exists merely as a way to show the user how to use the functions created by
+//              the engine's APIs.
 //  Wolfie
 //
 //  Created by BIBIN THOMAS on 7/11/16.
