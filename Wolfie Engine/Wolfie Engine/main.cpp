@@ -7,12 +7,17 @@
 //
 
 #include "Wolfie.h"
+#include <vector>
+#include <chrono>
+#include <random>
 #define BATCH_RENDERER
+//#define FPS_VIEWER
 
 int main(void)
 {
     GLuint shaderProgID;
-    Window engineWindow("Wolfie", 600, 800);
+    Window engineWindow("Wolfie", 1000, 1200);
+    std::vector<Sprite> spriteVec;
     
     if (engineWindow.init() == -1)
     {
@@ -46,6 +51,23 @@ int main(void)
                    glm::vec4(1.0f, 0.8f, 0.8f, 1.0f)
                    );
     
+    std::chrono::system_clock::time_point sysTimePoint = std::chrono::system_clock::now();
+    double seed = sysTimePoint.time_since_epoch().count();
+    std::mt19937 gen(seed);
+    
+    std::uniform_real_distribution<double> dist;
+    
+    for(int i = 0; i < 254;i += 1.0) {
+        for(int j = 0; j < 254; j += 1.0) {
+            Sprite tmpSprite(glm::vec3(i, j ,0.0f),
+                             glm::vec2(1.0f, 1.0f),
+                             glm::vec4(dist(gen),dist(gen), dist(gen), 1.0f));
+            spriteVec.push_back(tmpSprite);
+            
+        }
+    }
+    
+    
     
 #else
     
@@ -72,12 +94,12 @@ int main(void)
     glm::mat4 modelMat(1.0f);
     modelMat = glm::translate(modelMat, glm::vec3(0.0f, 0.0f, 0.0f));
     modelMat = glm::rotate(modelMat, glm::radians(0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
-    modelMat = glm::scale(modelMat, glm::vec3(1.5f, 1.5f, 1.0f));
+    modelMat = glm::scale(modelMat, glm::vec3(1.0f, 1.0f, 1.0f));
     
     // View matrix
     glm::mat4 viewMat = glm::lookAt(
-                                    glm::vec3(0,0,15), // Camera in World Space
-                                    glm::vec3(0,0,0), // and looks at the origin
+                                    glm::vec3(125,125,90), // Camera in World Space
+                                    glm::vec3(125,125,0), // and looks at the origin
                                     glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
                                     );
     
@@ -97,22 +119,34 @@ int main(void)
     Simple2DRenderer renderer;
 #endif
     
+#ifdef FPS_VIEWER
     Timer timer;
+    unsigned short frames = 0;
+    timer.start();
+    float time = 0;
+#endif
     
     while(!engineWindow.isClosed())
     {
-        timer.start();
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         engineWindow.clear();
         
         
         //body of the draw
 #ifdef BATCH_RENDERER
         renderer.begin();
-        renderer.submit(&sprite1);
-        renderer.submit(&sprite2);
-        renderer.submit(&sprite3);
+        
+        //renderer.submit(&sprite1);
+        //renderer.submit(&sprite2);
+        //renderer.submit(&sprite3);
+         
+        
+        
+        for(auto sprite : spriteVec) {
+            renderer.submit(&sprite);
+        }
+         
         renderer.end();
 #else
         renderer.submit(&sprite1);
@@ -135,8 +169,16 @@ int main(void)
         }
         
         //glBindVertexArray(0);
-        std::cout<<"Timer stopped. duration:"<<timer.stop()<<std::endl;
-        timer.reset();
+#ifdef FPS_VIEWER
+        frames++;
+        //std::cout<<"elasped time:"<<timer.elaspedTime()<<std::endl;
+        if (timer.elaspedTime() - time > 1.0f) {
+            time += 1.0f;
+            std::cout<<"Fps:"<<frames<<std::endl;
+            frames = 0;
+        }
+#endif
+        
     }
     
     engineWindow.close();

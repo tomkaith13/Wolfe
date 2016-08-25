@@ -23,6 +23,7 @@ void BatchRenderer::init()
     
     
     mVDBO = new Buffer(MAX_RENDERED_BUFF_SIZE, 0 , NULL, GL_DYNAMIC_DRAW, BATCHED_VERTEX_ATTRIB_BUFFER);
+    
     mVAO->addVertexDataBuffer(*mVDBO, VERTEX_ATTRIB_LOCATION, COLOR_ATTRIB_LOCATION, VERTEX_DATA_SIZE);
     
     /*

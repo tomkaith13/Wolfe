@@ -35,6 +35,6 @@ void Timer::reset()
 double Timer::elaspedTime()
 {
     using namespace std::chrono;
-    
+    mTimeEnd = steady_clock::now();
     return (duration_cast<duration<double>>(mTimeEnd - mTimeStart)).count();
 }
