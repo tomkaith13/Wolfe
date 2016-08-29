@@ -31,8 +31,7 @@ class Shader{
     
     //private functions
     void linkShader();
-    void disableShader();
-    void cleanupShader();
+        void cleanupShader();
     void load();
     GLint getUniformLocation(const char*);
 
@@ -42,6 +41,9 @@ public:
     bool checkValidShaderProg();
     GLuint getProgramID();
     void enable();
+    void disable();
+    void disableShader();
+
     void setUniformMatrix4fv(const char* name, const glm::mat4& mat);
     void setUniformVec4(const char*, glm::vec4);
 };

@@ -48,8 +48,8 @@ class BatchRenderer : public Renderer2D
 public:
     
     BatchRenderer();
-    void begin();
-    void end();
+    void begin() override;
+    void end() override;
     void submit(Renderable2D*) override;
     void flush() override;    
 };

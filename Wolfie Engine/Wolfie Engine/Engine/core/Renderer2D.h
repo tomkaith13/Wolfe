@@ -15,8 +15,10 @@
 // This abstract class is used in Renderer2D.cpp
 class Renderer2D
 {
-protected:
+public:
+    virtual void begin() {}
     virtual void submit(Renderable2D*) = 0;
+    virtual void end() {}
     virtual void flush() = 0;
 };
 #endif /* Renderer2D_hpp */

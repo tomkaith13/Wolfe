@@ -11,8 +11,8 @@
 #include <vector>
 #include <chrono>
 #include <random>
-#define BATCH_RENDERER
-#define FPS_VIEWER
+
+#define FPS_VIEWER 1
 
 int main(void)
 {
@@ -35,68 +35,14 @@ int main(void)
         std::cout<<"Shader compilation issues"<<std::endl;
         return -1;
     }
-    
-#ifdef BATCH_RENDERER
-    
-    Sprite sprite1(glm::vec3(-1.0f, -1.0f, 0.0f),
-                   glm::vec2(3.0f, 3.0f),
-                   glm::vec4(1.0f, 0.0f, 0.0f, 1.0f)
-                   );
-    Sprite sprite2(glm::vec3(0.0f, 0.0f, 0.0f),
-                   glm::vec2(3.0f, 3.0f),
-                   glm::vec4(0.1f, 0.8f, 0.8f, 1.0f)
-                   );
-    
-    Sprite sprite3(glm::vec3(1.0f, 1.0f, 0.0f),
-                   glm::vec2(3.0f, 3.0f),
-                   glm::vec4(1.0f, 0.8f, 0.8f, 1.0f)
-                   );
-    
-    //Randomization logic for sprite colors using <chrono> and <random>
-    std::chrono::system_clock::time_point sysTimePoint = std::chrono::system_clock::now();
-    double seed = sysTimePoint.time_since_epoch().count();
-    std::mt19937 gen(seed);
-    
-    std::uniform_real_distribution<double> dist;
-    
-    for(int i = 0; i < 254;i += 1.0) {
-        for(int j = 0; j < 254; j += 1.0) {
-            Sprite tmpSprite(glm::vec3(i, j ,0.0f),
-                             glm::vec2(1.0f, 1.0f),
-                             glm::vec4(dist(gen), dist(gen), dist(gen), 1.0f));
-            spriteVec.push_back(tmpSprite);
-            
-        }
-    }
-    
-    
-    
-#else
-    
-    SimpleSprite sprite1(glm::vec3(-1.0f, -1.0f, 0.0f),
-                         glm::vec2(3.0f, 3.0f),
-                         glm::vec4(1.0f, 0.0f, 0.0f, 1.0f)
-                         );
-    SimpleSprite sprite2(glm::vec3(0.0f, 0.0f, 0.0f),
-                         glm::vec2(3.0f, 3.0f),
-                         glm::vec4(0.1f, 0.8f, 0.8f, 1.0f)
-                         );
-    
-    SimpleSprite sprite3(glm::vec3(1.0f, 1.0f, 0.0f),
-                         glm::vec2(3.0f, 3.0f),
-                         glm::vec4(1.0f, 0.8f, 0.8f, 1.0f)
-                         );
-    
-#endif
-    
-    
+
     // Transformation Calculations
     //model matrix
     
     glm::mat4 modelMat(1.0f);
-    modelMat = glm::translate(modelMat, glm::vec3(0.0f, 0.0f, 0.0f));
-    modelMat = glm::rotate(modelMat, glm::radians(0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
-    modelMat = glm::scale(modelMat, glm::vec3(1.0f, 1.0f, 1.0f));
+    //modelMat = glm::translate(modelMat, glm::vec3(0.0f, 0.0f, 0.0f));
+    //modelMat = glm::rotate(modelMat, glm::radians(0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+    //modelMat = glm::scale(modelMat, glm::vec3(1.0f, 1.0f, 1.0f));
     
     // View matrix
     glm::mat4 viewMat = glm::lookAt(
@@ -110,18 +56,28 @@ int main(void)
     
     // final MVP transform
     glm::mat4 mvpMat = projMat * viewMat * modelMat;
+
+    //Randomization logic for sprite colors using <chrono> and <random>
+    std::chrono::system_clock::time_point sysTimePoint = std::chrono::system_clock::now();
+    double seed = sysTimePoint.time_since_epoch().count();
+    std::mt19937 gen(seed);
     
-    // enable the shader (glUseProgram)
-    shObj.enable();
-    shObj.setUniformMatrix4fv("mvp", mvpMat);
+    std::uniform_real_distribution<double> dist;
     
-#ifdef BATCH_RENDERER
-    BatchRenderer renderer;
-#else
-    Simple2DRenderer renderer;
-#endif
     
-#ifdef FPS_VIEWER
+    TileLayer *spriteLayer = new TileLayer(&shObj, new BatchRenderer(), mvpMat);
+    
+    for(int i = 0; i < 254;i += 1.0) {
+        for(int j = 0; j < 254; j += 1.0) {
+            
+            spriteLayer->add(new Sprite(glm::vec3(i, j, 0.0f),
+                                        glm::vec2(1.0f, 1.0f),
+                                        glm::vec4(dist(gen), dist(gen), dist(gen), 1.0f)
+                                        ));
+        }
+    }
+    
+#if FPS_VIEWER
     Timer timer;
     unsigned short frames = 0;
     timer.start();
@@ -130,33 +86,11 @@ int main(void)
     
     while(!engineWindow.isClosed())
     {
-        
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         engineWindow.clear();
         
-        
         //body of the draw
-#ifdef BATCH_RENDERER
-        renderer.begin();
-        
-        //renderer.submit(&sprite1);
-        //renderer.submit(&sprite2);
-        //renderer.submit(&sprite3);
-         
-        
-        
-        for(auto sprite : spriteVec) {
-            renderer.submit(&sprite);
-        }
-         
-        renderer.end();
-#else
-        renderer.submit(&sprite1);
-        renderer.submit(&sprite2);
-        renderer.submit(&sprite3);
-#endif
-        
-        renderer.flush();
+        spriteLayer->render();
         
         engineWindow.update();
         
@@ -170,10 +104,8 @@ int main(void)
             std::cout<<" Mouse y:"<<engineWindow.getWinMousePosition().second<<std::endl;
         }
         
-        //glBindVertexArray(0);
-#ifdef FPS_VIEWER
+#if FPS_VIEWER
         frames++;
-        //std::cout<<"elasped time:"<<timer.elaspedTime()<<std::endl;
         if (timer.elaspedTime() - time > 1.0f) {
             time += 1.0f;
             std::cout<<"Fps:"<<frames<<std::endl;
@@ -182,7 +114,7 @@ int main(void)
 #endif
         
     }
-    
+    shObj.disableShader();
     engineWindow.close();
     
     return 0;

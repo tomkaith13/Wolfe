@@ -100,11 +100,13 @@ void Shader::linkShader() {
 
         
         disableShader();
+        cleanupShader();
         return;
     }
     
-    //finally, enable the use of the shader in the program
+    //finally, disable the use of the shader in the program
     disableShader();
+    cleanupShader();
     
 }
 
@@ -112,7 +114,7 @@ void Shader::disableShader() {
     
     glDetachShader(mShaderProgramID, mVertexShader);
     glDetachShader(mShaderProgramID, mFragShader);
-    cleanupShader();
+    //cleanupShader();
     
 }
 
@@ -138,6 +140,11 @@ GLuint Shader::getProgramID()
 void Shader::enable()
 {
     glUseProgram(mShaderProgramID);
+}
+
+void Shader::disable()
+{
+    glUseProgram(0);
 }
 
 GLint Shader::getUniformLocation(const char* uniformName)

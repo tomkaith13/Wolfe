@@ -20,6 +20,7 @@
 #include "BatchRenderer.h"
 #include "Sprite.h"
 #include "Timer.h"
+#include "TileLayer.h"
 
 //glm headers
 #include <glm/glm.hpp>
