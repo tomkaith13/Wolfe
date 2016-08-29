@@ -16,7 +16,7 @@
 
 int main(void)
 {
-    GLuint shaderProgID;
+    //GLuint shaderProgID;
     Window engineWindow("Wolfie", 800, 1000);
     std::vector<Sprite> spriteVec;
     
@@ -28,7 +28,7 @@ int main(void)
     
     //creating shader program
     Shader shObj(FRAGMENT_SHADER_SOURCE, VERTEX_SHADER_SOURCE);
-    shaderProgID = shObj.getProgramID();
+    //shaderProgID = shObj.getProgramID();
     
     if(!shObj.checkValidShaderProg())
     {
