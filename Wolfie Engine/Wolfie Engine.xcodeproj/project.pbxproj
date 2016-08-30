@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		03004BCD1D6F9D78000FA0DF /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03004BCB1D6F9D78000FA0DF /* Layer.cpp */; };
 		0308114B1D755CAC00DED2F4 /* Group.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 030811491D755CAC00DED2F4 /* Group.cpp */; };
+		0308114D1D75661E00DED2F4 /* layer_usage_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0308114C1D75661E00DED2F4 /* layer_usage_test.cpp */; };
 		0346F2631D680A0800A28BC7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0346F2621D680A0800A28BC7 /* main.cpp */; };
 		0346F26B1D680C3200A28BC7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0346F26A1D680C3200A28BC7 /* OpenGL.framework */; };
 		0346F26D1D680C6F00A28BC7 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0346F26C1D680C6F00A28BC7 /* libglfw.3.2.dylib */; };
@@ -47,6 +48,7 @@
 		03004BCC1D6F9D78000FA0DF /* Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Layer.h; path = "Wolfie Engine/Engine/core/Layer.h"; sourceTree = "<group>"; };
 		030811491D755CAC00DED2F4 /* Group.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Group.cpp; path = "Wolfie Engine/Engine/core/Group.cpp"; sourceTree = "<group>"; };
 		0308114A1D755CAC00DED2F4 /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Group.h; path = "Wolfie Engine/Engine/core/Group.h"; sourceTree = "<group>"; };
+		0308114C1D75661E00DED2F4 /* layer_usage_test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = layer_usage_test.cpp; path = "Wolfie Engine/Sample/layer_usage_test.cpp"; sourceTree = "<group>"; };
 		0346F25F1D680A0800A28BC7 /* Wolfie Engine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Wolfie Engine"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0346F2621D680A0800A28BC7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0346F26A1D680C3200A28BC7 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -239,6 +241,7 @@
 			children = (
 				03FF53651D6E7FA700FCE9B6 /* test-sprite-floor.cpp */,
 				03FF53681D6E96C600FCE9B6 /* max_sprite_test.cpp */,
+				0308114C1D75661E00DED2F4 /* layer_usage_test.cpp */,
 			);
 			name = "test-samples";
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				03FF53691D6E96C600FCE9B6 /* max_sprite_test.cpp in Sources */,
 				0346F29E1D68150600A28BC7 /* SimpleSprite.cpp in Sources */,
 				03004BCD1D6F9D78000FA0DF /* Layer.cpp in Sources */,
+				0308114D1D75661E00DED2F4 /* layer_usage_test.cpp in Sources */,
 				0346F28A1D6814B200A28BC7 /* ElementBuffer.cpp in Sources */,
 				0346F29B1D68150600A28BC7 /* BatchRenderer.cpp in Sources */,
 				0346F29C1D68150600A28BC7 /* Shader.cpp in Sources */,

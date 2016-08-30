@@ -18,7 +18,7 @@ class Renderable2D;
 // This abstract class is used in Renderer2D.cpp
 class Renderer2D
 {
-protected:
+public:
     std::vector<glm::mat4> mTransformMatVec;
     glm::mat4 mCurrTransformMat;
     
@@ -39,7 +39,7 @@ protected:
         if (mTransformMatVec.size() > 1)
             mTransformMatVec.pop_back();
     }
-public:
+
     virtual void begin() {}
     virtual void submit(Renderable2D*) = 0;
     virtual void end() {}

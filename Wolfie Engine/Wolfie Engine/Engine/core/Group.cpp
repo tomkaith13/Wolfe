@@ -7,3 +7,24 @@
 //
 
 #include "Group.h"
+
+Group::Group(glm::mat4 tMat):
+    mGroupTransformMat(tMat)
+{
+    
+}
+
+void Group::submit(Renderer2D* renderer)
+{
+    renderer->push(mGroupTransformMat);
+    for (auto sprite : mGroupRenderableVec)
+        sprite->submit(renderer);
+    renderer->pop();
+    
+}
+
+void Group::add(Renderable2D* renderable)
+{
+    mGroupRenderableVec.push_back(renderable);
+}
+

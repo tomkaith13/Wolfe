@@ -35,6 +35,7 @@ protected:
 
 
 public:
+    Renderable2D() {}
     Renderable2D(glm::vec3 position, glm::vec2 size, glm::vec4 color) :
     mPosition(position), mSize(size) , mColor(color) {
         mIndices[0] = 0;
