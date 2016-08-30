@@ -85,25 +85,46 @@ void BatchRenderer::submit(Renderable2D* renderable) {
      |
      
      position
-     */    
+     */
+    
+    // Matrix mult is expensive in the game main loop
+    // Another optimization for mCurrTransformMat calculation:
+    // If this is the identity matrix, then just avoid the mutiplication itself.
+    bool identityOptmize = true;
+    
+    identityOptmize = (mCurrTransformMat == glm::mat4(1.0f))? true : false;
+    
+    
     
     // Point A
-    mVdata->position =   mCurrTransformMat * glm::vec4(spritePos, 1.0);
+    if (identityOptmize)
+        mVdata->position = glm::vec4(spritePos, 1.0);
+    else
+        mVdata->position =   mCurrTransformMat * glm::vec4(spritePos, 1.0);
     mVdata->color = spriteColor;
     mVdata++;
     
     //Point B
-    mVdata->position = mCurrTransformMat * glm::vec4(glm::vec3(spritePos.x, spritePos.y + spriteSize.y, spritePos.z), 1.0);
+    if (identityOptmize)
+        mVdata->position = glm::vec4(glm::vec3(spritePos.x, spritePos.y + spriteSize.y, spritePos.z), 1.0);
+    else
+        mVdata->position = mCurrTransformMat * glm::vec4(glm::vec3(spritePos.x, spritePos.y + spriteSize.y, spritePos.z), 1.0);
     mVdata->color = spriteColor;
     mVdata++;
     
     //Point C
-    mVdata->position = mCurrTransformMat * glm::vec4(glm::vec3(spritePos.x + spriteSize.x, spritePos.y, spritePos.z), 1.0);
+    if (identityOptmize)
+        mVdata->position = glm::vec4(glm::vec3(spritePos.x + spriteSize.x, spritePos.y, spritePos.z), 1.0);
+    else
+        mVdata->position = mCurrTransformMat * glm::vec4(glm::vec3(spritePos.x + spriteSize.x, spritePos.y, spritePos.z), 1.0);
     mVdata->color = spriteColor;
     mVdata++;
     
     //Point D
-    mVdata->position = mCurrTransformMat * glm::vec4(glm::vec3(spritePos.x + spriteSize.x, spritePos.y + spriteSize.y, spritePos.z), 1.0);
+    if (identityOptmize)
+        mVdata->position = glm::vec4(glm::vec3(spritePos.x + spriteSize.x, spritePos.y + spriteSize.y, spritePos.z), 1.0);
+    else
+        mVdata->position = mCurrTransformMat * glm::vec4(glm::vec3(spritePos.x + spriteSize.x, spritePos.y + spriteSize.y, spritePos.z), 1.0);
     mVdata->color = spriteColor;
     mVdata++;
     

@@ -28,7 +28,6 @@ int main(void)
     
     //creating shader program
     Shader shObj(FRAGMENT_SHADER_SOURCE, VERTEX_SHADER_SOURCE);
-    //shaderProgID = shObj.getProgramID();
     
     if(!shObj.checkValidShaderProg())
     {
