@@ -12,6 +12,12 @@
 #include "Renderable2D.h"
 #include <vector>
 
+/*
+ * Groups are parent container which exist inside a Layer.
+ * Groups by themselves dont render, instead they submit their
+ * vector of renderables to the renderer. The renderer now exists
+ * in the layer.
+ */
 class Group : public Renderable2D
 {
     std::vector<Renderable2D*> mGroupRenderableVec;
