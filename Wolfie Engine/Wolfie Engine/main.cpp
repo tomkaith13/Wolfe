@@ -17,7 +17,7 @@
 int main(void)
 {
     //GLuint shaderProgID;
-    Window engineWindow("Wolfie", 800, 1000);
+    Window engineWindow("Wolfie", 600, 800);
     std::vector<Sprite> spriteVec;
     
     if (engineWindow.init() == -1)
@@ -67,8 +67,8 @@ int main(void)
     
     TileLayer *spriteLayer = new TileLayer(&shObj, new BatchRenderer(), mvpMat);
     
-    for(int i = 0; i < 250;i += 5.0) {
-        for(int j = 0; j < 250; j += 5.0) {
+    for(int i = 0; i < 250;i += 2.0) {
+        for(int j = 0; j < 250; j += 2.0) {
             
             spriteLayer->add(new Sprite(glm::vec3(i, j, 0.0f),
                                         glm::vec2(5.0f, 5.0f),
