@@ -38,6 +38,8 @@ public:
     {
         if (mTransformMatVec.size() > 1)
             mTransformMatVec.pop_back();
+        
+        mCurrTransformMat = mTransformMatVec.back();
     }
 
     virtual void begin() {}
