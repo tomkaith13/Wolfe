@@ -12,6 +12,7 @@
 //#include "Renderable2D.h"
 #include <vector>
 #include <GLM/glm.hpp>
+#include <GLM/gtc/type_ptr.hpp>
 
 class Renderable2D;
 
@@ -22,13 +23,13 @@ public:
     std::vector<glm::mat4> mTransformMatVec;
     glm::mat4 mCurrTransformMat;
     
-    virtual void push(glm::mat4 tMat, bool overwrite = false)
+    virtual void push(float* tMatPtr, bool overwrite = false)
     {
         if (!overwrite)
         {
-            mTransformMatVec.push_back(mTransformMatVec.back() * tMat);
+            mTransformMatVec.push_back(mTransformMatVec.back() * glm::make_mat4(tMatPtr));
         } else {
-            mTransformMatVec.push_back(tMat);
+            mTransformMatVec.push_back(glm::make_mat4(tMatPtr));
         }
         
         mCurrTransformMat = mTransformMatVec.back();

@@ -16,7 +16,7 @@ Group::Group(glm::mat4 tMat):
 
 void Group::submit(Renderer2D* renderer)
 {
-    renderer->push(mGroupTransformMat);
+    renderer->push(glm::value_ptr(mGroupTransformMat));
     for (auto sprite : mGroupRenderableVec)
         sprite->submit(renderer);
     renderer->pop();
