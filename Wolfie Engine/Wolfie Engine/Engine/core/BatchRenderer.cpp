@@ -21,6 +21,8 @@ void BatchRenderer::init()
     mVAO = new VertexArray();
     mIndexCount = 0;
     
+    mTransformMatVec.push_back(glm::mat4(1.0f));
+    
     
     mVDBO = new Buffer(MAX_RENDERED_BUFF_SIZE, 0 , NULL, GL_DYNAMIC_DRAW, BATCHED_VERTEX_ATTRIB_BUFFER);
     
@@ -63,15 +65,13 @@ void BatchRenderer::begin()
 }
 
 void BatchRenderer::submit(Renderable2D* renderable) {
-    Sprite* renderedSprite = (Sprite*)renderable;
+    
+    Sprite* renderedSprite = static_cast<Sprite*>(renderable);
     glm::vec2 spriteSize = renderedSprite->getSize();
     glm::vec3 spritePos = renderedSprite->getPosition();
-    glm::vec4 spriteColor = renderedSprite->getColor();
-    
-    
+    glm::vec4 spriteColor = renderedSprite->getColor();    
     
     /*
-     
      And now for some artwork!! :)
      
      
@@ -85,26 +85,25 @@ void BatchRenderer::submit(Renderable2D* renderable) {
      |
      
      position
-     */
-    
+     */    
     
     // Point A
-    mVdata->position = glm::vec4(spritePos, 1.0);
+    mVdata->position =   mCurrTransformMat * glm::vec4(spritePos, 1.0);
     mVdata->color = spriteColor;
     mVdata++;
     
     //Point B
-    mVdata->position = glm::vec4(glm::vec3(spritePos.x, spritePos.y + spriteSize.y, spritePos.z), 1.0);
+    mVdata->position = mCurrTransformMat * glm::vec4(glm::vec3(spritePos.x, spritePos.y + spriteSize.y, spritePos.z), 1.0);
     mVdata->color = spriteColor;
     mVdata++;
     
     //Point C
-    mVdata->position = glm::vec4(glm::vec3(spritePos.x + spriteSize.x, spritePos.y, spritePos.z), 1.0);
+    mVdata->position = mCurrTransformMat * glm::vec4(glm::vec3(spritePos.x + spriteSize.x, spritePos.y, spritePos.z), 1.0);
     mVdata->color = spriteColor;
     mVdata++;
     
     //Point D
-    mVdata->position = glm::vec4(glm::vec3(spritePos.x + spriteSize.x, spritePos.y + spriteSize.y, spritePos.z), 1.0);
+    mVdata->position = mCurrTransformMat * glm::vec4(glm::vec3(spritePos.x + spriteSize.x, spritePos.y + spriteSize.y, spritePos.z), 1.0);
     mVdata->color = spriteColor;
     mVdata++;
     

@@ -33,7 +33,7 @@ void Layer::render()
     mLayerRenderer->begin();
     
     for(auto sprite : mLayerVec)
-        mLayerRenderer->submit(sprite);
+        sprite->submit(mLayerRenderer);
     
     mLayerRenderer->flush();
     

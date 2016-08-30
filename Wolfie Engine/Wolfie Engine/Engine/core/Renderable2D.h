@@ -11,7 +11,9 @@
 
 #include <glm/glm.hpp>
 #include <GL/glew.h>
+#include "Renderer2D.h"
 
+//class Renderer2D;
 
 /* 
  This is an abstract class for all renderables
@@ -24,13 +26,15 @@ struct VertexData
 };
 
 class Renderable2D{
+protected:
     
     glm::vec3 mPosition;
     glm::vec2 mSize;
     glm::vec4 mColor;
     GLuint mIndices[6];
 
-protected:
+
+public:
     Renderable2D(glm::vec3 position, glm::vec2 size, glm::vec4 color) :
     mPosition(position), mSize(size) , mColor(color) {
         mIndices[0] = 0;
@@ -46,7 +50,11 @@ protected:
     inline const glm::vec2 getSize() { return mSize;}
     inline const glm::vec4 getColor() { return mColor;}
     inline GLuint* getIndices() { return mIndices; }
-
+    
+    virtual void submit(Renderer2D* renderer)
+    {
+        renderer->submit(this);
+    }
     
 };
 #endif /* Renderable2D_hpp */

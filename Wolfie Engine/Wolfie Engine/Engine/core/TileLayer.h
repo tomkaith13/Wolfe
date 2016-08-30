@@ -18,12 +18,12 @@
 
 
 /*
- * 2D Layer which has its own vector of renderables and 2D renderer
+ * 2D Layer which has its own vector of renderables and 2D batch renderer
  */
 class TileLayer : public Layer
 {
 public:
-    TileLayer(Shader*, Renderer2D*, glm::mat4);
+    TileLayer(Shader* shader, Renderer2D* renderer, glm::mat4 mvpMat);
 };
 
 #endif /* TILELAYER_H */

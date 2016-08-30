@@ -9,14 +9,15 @@
 #include "Simple2DRenderer.h"
 
 
-void Simple2DRenderer::submit(Renderable2D* sprite)
+void Simple2DRenderer::submit(Renderable2D* rendereable)
 {
+    SimpleSprite* sprite = static_cast<SimpleSprite*>(rendereable);
     mRenderQueue.push_back((SimpleSprite*)sprite);
 }
 
 void Simple2DRenderer::flush()
 {
-    SimpleSprite* sprite;    
+    SimpleSprite* sprite;
     
     while(!mRenderQueue.empty())
     {

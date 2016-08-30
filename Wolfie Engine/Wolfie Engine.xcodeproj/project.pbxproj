@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03004BCD1D6F9D78000FA0DF /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03004BCB1D6F9D78000FA0DF /* Layer.cpp */; };
+		0308114B1D755CAC00DED2F4 /* Group.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 030811491D755CAC00DED2F4 /* Group.cpp */; };
 		0346F2631D680A0800A28BC7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0346F2621D680A0800A28BC7 /* main.cpp */; };
 		0346F26B1D680C3200A28BC7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0346F26A1D680C3200A28BC7 /* OpenGL.framework */; };
 		0346F26D1D680C6F00A28BC7 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0346F26C1D680C6F00A28BC7 /* libglfw.3.2.dylib */; };
@@ -44,6 +45,8 @@
 /* Begin PBXFileReference section */
 		03004BCB1D6F9D78000FA0DF /* Layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Layer.cpp; path = "Wolfie Engine/Engine/core/Layer.cpp"; sourceTree = "<group>"; };
 		03004BCC1D6F9D78000FA0DF /* Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Layer.h; path = "Wolfie Engine/Engine/core/Layer.h"; sourceTree = "<group>"; };
+		030811491D755CAC00DED2F4 /* Group.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Group.cpp; path = "Wolfie Engine/Engine/core/Group.cpp"; sourceTree = "<group>"; };
+		0308114A1D755CAC00DED2F4 /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Group.h; path = "Wolfie Engine/Engine/core/Group.h"; sourceTree = "<group>"; };
 		0346F25F1D680A0800A28BC7 /* Wolfie Engine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Wolfie Engine"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0346F2621D680A0800A28BC7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0346F26A1D680C3200A28BC7 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -163,7 +166,7 @@
 		0346F2A11D68151100A28BC7 /* core */ = {
 			isa = PBXGroup;
 			children = (
-				03EFC5AE1D73FE5200AED31A /* Layers */,
+				03EFC5AE1D73FE5200AED31A /* Layers and Groups */,
 				0346F28D1D68150600A28BC7 /* BatchRenderer.cpp */,
 				0346F28E1D68150600A28BC7 /* BatchRenderer.h */,
 				0346F28F1D68150600A28BC7 /* Renderable2D.h */,
@@ -218,15 +221,17 @@
 			name = Readme;
 			sourceTree = "<group>";
 		};
-		03EFC5AE1D73FE5200AED31A /* Layers */ = {
+		03EFC5AE1D73FE5200AED31A /* Layers and Groups */ = {
 			isa = PBXGroup;
 			children = (
 				03004BCB1D6F9D78000FA0DF /* Layer.cpp */,
 				03004BCC1D6F9D78000FA0DF /* Layer.h */,
 				03EFC5AF1D73FED600AED31A /* TileLayer.cpp */,
 				03EFC5B01D73FED600AED31A /* TileLayer.h */,
+				030811491D755CAC00DED2F4 /* Group.cpp */,
+				0308114A1D755CAC00DED2F4 /* Group.h */,
 			);
-			name = Layers;
+			name = "Layers and Groups";
 			sourceTree = "<group>";
 		};
 		03FF53671D6E800D00FCE9B6 /* test-samples */ = {
@@ -295,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0346F2631D680A0800A28BC7 /* main.cpp in Sources */,
+				0308114B1D755CAC00DED2F4 /* Group.cpp in Sources */,
 				03FF53661D6E7FA700FCE9B6 /* test-sprite-floor.cpp in Sources */,
 				0346F2A01D68150600A28BC7 /* Window.cpp in Sources */,
 				0346F28B1D6814B200A28BC7 /* VertexArray.cpp in Sources */,
