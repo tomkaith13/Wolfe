@@ -66,8 +66,8 @@ int main(void)
     
     TileLayer *spriteLayer = new TileLayer(&shObj, new BatchRenderer(), mvpMat);
     
-    for(int i = 0; i < 250;i += 2.0) {
-        for(int j = 0; j < 250; j += 2.0) {
+    for(int i = 0; i < 250;i += 1.0) {
+        for(int j = 0; j < 250; j += 1.0) {
             
             spriteLayer->add(new Sprite(glm::vec3(i, j, 0.0f),
                                         glm::vec2(5.0f, 5.0f),
