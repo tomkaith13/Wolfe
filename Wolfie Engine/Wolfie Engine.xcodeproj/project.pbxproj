@@ -26,6 +26,7 @@
 		0346F2A91D68166A00A28BC7 /* fileutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0346F2A51D68166A00A28BC7 /* fileutils.cpp */; };
 		0346F2AA1D68166A00A28BC7 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0346F2A71D68166A00A28BC7 /* Timer.cpp */; };
 		038BB0861D6A900F00FEBDD0 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 038BB0851D6A900F00FEBDD0 /* README.md */; };
+		03EF11D41D77AFAD006D0B2F /* group_usage_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03EF11D31D77AFAD006D0B2F /* group_usage_test.cpp */; };
 		03EFC5B11D73FED600AED31A /* TileLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03EFC5AF1D73FED600AED31A /* TileLayer.cpp */; };
 		03FF53661D6E7FA700FCE9B6 /* test-sprite-floor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03FF53651D6E7FA700FCE9B6 /* test-sprite-floor.cpp */; };
 		03FF53691D6E96C600FCE9B6 /* max_sprite_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03FF53681D6E96C600FCE9B6 /* max_sprite_test.cpp */; };
@@ -82,6 +83,7 @@
 		0346F2A71D68166A00A28BC7 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = "Wolfie Engine/Engine/Utils/Timer.cpp"; sourceTree = "<group>"; };
 		0346F2A81D68166A00A28BC7 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Timer.h; path = "Wolfie Engine/Engine/Utils/Timer.h"; sourceTree = "<group>"; };
 		038BB0851D6A900F00FEBDD0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		03EF11D31D77AFAD006D0B2F /* group_usage_test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = group_usage_test.cpp; path = "Wolfie Engine/Sample/group_usage_test.cpp"; sourceTree = "<group>"; };
 		03EFC5AF1D73FED600AED31A /* TileLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TileLayer.cpp; path = "Wolfie Engine/Engine/core/TileLayer.cpp"; sourceTree = "<group>"; };
 		03EFC5B01D73FED600AED31A /* TileLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TileLayer.h; path = "Wolfie Engine/Engine/core/TileLayer.h"; sourceTree = "<group>"; };
 		03FF53651D6E7FA700FCE9B6 /* test-sprite-floor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "test-sprite-floor.cpp"; path = "Wolfie Engine/Sample/test-sprite-floor.cpp"; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				03FF53651D6E7FA700FCE9B6 /* test-sprite-floor.cpp */,
 				03FF53681D6E96C600FCE9B6 /* max_sprite_test.cpp */,
 				0308114C1D75661E00DED2F4 /* layer_usage_test.cpp */,
+				03EF11D31D77AFAD006D0B2F /* group_usage_test.cpp */,
 			);
 			name = "test-samples";
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				0346F28A1D6814B200A28BC7 /* ElementBuffer.cpp in Sources */,
 				0346F29B1D68150600A28BC7 /* BatchRenderer.cpp in Sources */,
 				0346F29C1D68150600A28BC7 /* Shader.cpp in Sources */,
+				03EF11D41D77AFAD006D0B2F /* group_usage_test.cpp in Sources */,
 				0346F29D1D68150600A28BC7 /* Simple2Renderer.cpp in Sources */,
 				0346F2891D6814B200A28BC7 /* Buffer.cpp in Sources */,
 				038BB0861D6A900F00FEBDD0 /* README.md in Sources */,

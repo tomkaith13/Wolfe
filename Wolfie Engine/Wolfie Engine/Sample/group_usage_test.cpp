@@ -1,10 +1,10 @@
 //
-//  main.cpp - This file exists merely as a way to show the user how to use the functions created by
-//              the engine's APIs.
-//  Wolfie
+//  group_usage_test.cpp
+//  Wolfie Engine
 //
-//  Created by BIBIN THOMAS on 7/11/16.
-//  Copyright © 2016 BIBIN THOMAS. All rights reserved.
+//  Created by BIBIN THOMAS on 8/31/16.
+//  Copyright © 2016 tomkaith13. All rights reserved.
+//
 //
 
 #include "Wolfie.h"
@@ -14,7 +14,7 @@
 
 #define FPS_VIEWER 1
 
-int main(void)
+int group_layer_test(void)
 {
     //GLuint shaderProgID;
     Window engineWindow("Wolfie", 600, 800);
@@ -34,7 +34,7 @@ int main(void)
         std::cout<<"Shader compilation issues"<<std::endl;
         return -1;
     }
-
+    
     // Transformation Calculations
     //model matrix
     glm::mat4 modelMat(1.0f);
@@ -51,7 +51,7 @@ int main(void)
     
     // final MVP transform
     glm::mat4 mvpMat = projMat * viewMat * modelMat;
-
+    
     //Randomization logic for sprite colors using <chrono> and <random>
     std::chrono::system_clock::time_point sysTimePoint = std::chrono::system_clock::now();
     double seed = sysTimePoint.time_since_epoch().count();
@@ -75,7 +75,7 @@ int main(void)
     Group* group = new Group(modelMat);
     
     
-    for(int i = 555, j = 0;i > 0;i -= 2, j++)
+    for(int i = 55, j = 0;i > 0;i -= 2, j++)
     {
         group->add(new Sprite(
                               glm::vec3(j, j, 0.0f),
@@ -88,7 +88,7 @@ int main(void)
     // add the big sprite to super group
     groupSuper->add(new Sprite(
                                glm::vec3(0.0, 0.0f, 0.0f),
-                               glm::vec2(600, 600),
+                               glm::vec2(60, 60),
                                glm::vec4(1.0f, dist(gen), dist(gen), 1.0f)
                                ));
     
