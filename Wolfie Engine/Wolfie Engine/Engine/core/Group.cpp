@@ -17,8 +17,11 @@ Group::Group(glm::mat4 tMat):
 void Group::submit(Renderer2D* renderer)
 {
     renderer->push(glm::value_ptr(mGroupTransformMat));
+    
+    // we could have passed the sprite to the renderer but we need to also be able to pass groups withing groups
     for (auto sprite : mGroupRenderableVec)
         sprite->submit(renderer);
+    
     renderer->pop();
     
 }
@@ -26,5 +29,11 @@ void Group::submit(Renderer2D* renderer)
 void Group::add(Renderable2D* renderable)
 {
     mGroupRenderableVec.push_back(renderable);
+}
+
+Group::~Group()
+{
+    for (auto sprite : mGroupRenderableVec)
+        delete sprite;
 }
 

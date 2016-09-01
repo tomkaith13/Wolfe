@@ -21,6 +21,7 @@
 #include "Sprite.h"
 #include "Timer.h"
 #include "TileLayer.h"
+#include "Group.h"
 
 //glm headers
 #include <glm/glm.hpp>

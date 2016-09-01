@@ -24,6 +24,7 @@ class Group : public Renderable2D
     glm::mat4 mGroupTransformMat;
 public:
     Group(glm::mat4);
+    ~Group();
     void submit(Renderer2D*) override;
     void add(Renderable2D*);
     
