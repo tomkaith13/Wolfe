@@ -12,6 +12,11 @@
 #include <chrono>
 #include <random>
 
+//adding stb_image support
+// This needs to be done in a C/C++ file according to the readme specified in  stb_image.h
+#define STB_IMAGE_IMPLEMENTATION
+#include "stb_image.h"
+
 #define FPS_VIEWER 1
 
 int main(void)
