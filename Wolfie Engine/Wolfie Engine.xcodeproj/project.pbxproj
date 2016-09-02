@@ -83,6 +83,7 @@
 		0346F2A71D68166A00A28BC7 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = "Wolfie Engine/Engine/Utils/Timer.cpp"; sourceTree = "<group>"; };
 		0346F2A81D68166A00A28BC7 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Timer.h; path = "Wolfie Engine/Engine/Utils/Timer.h"; sourceTree = "<group>"; };
 		038BB0851D6A900F00FEBDD0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		039F61161D7A00030088FA0A /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stb_image.h; path = "Wolfie Engine/External Library/stb/stb_image.h"; sourceTree = "<group>"; };
 		03EF11D31D77AFAD006D0B2F /* group_usage_test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = group_usage_test.cpp; path = "Wolfie Engine/Sample/group_usage_test.cpp"; sourceTree = "<group>"; };
 		03EFC5AF1D73FED600AED31A /* TileLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TileLayer.cpp; path = "Wolfie Engine/Engine/core/TileLayer.cpp"; sourceTree = "<group>"; };
 		03EFC5B01D73FED600AED31A /* TileLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TileLayer.h; path = "Wolfie Engine/Engine/core/TileLayer.h"; sourceTree = "<group>"; };
@@ -212,6 +213,7 @@
 		038BB07E1D6A506800FEBDD0 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				039F61161D7A00030088FA0A /* stb_image.h */,
 				0346F27B1D6811F300A28BC7 /* Wolfie.h */,
 			);
 			name = include;

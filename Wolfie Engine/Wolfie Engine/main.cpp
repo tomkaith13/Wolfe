@@ -41,8 +41,8 @@ int main(void)
     
     // View matrix
     glm::mat4 viewMat = glm::lookAt(
-                                    glm::vec3(20,40,90), // Camera in World Space
-                                    glm::vec3(20,40,0), // and looks at the origin
+                                    glm::vec3(10,400,90), // Camera in World Space
+                                    glm::vec3(10,400,0), // and looks at the origin
                                     glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
                                     );
     
