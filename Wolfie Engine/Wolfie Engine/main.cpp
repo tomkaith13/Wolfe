@@ -42,12 +42,12 @@ int main(void)
     // View matrix
     glm::mat4 viewMat = glm::lookAt(
                                     glm::vec3(10,20,10), // Camera in World Space
-                                    glm::vec3(10,90,0), // and looks at the origin
+                                    glm::vec3(10,20,0), // and looks at the origin
                                     glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
                                     );
     
     //Projection Matrix
-    glm::mat4 projMat = glm::perspective(45.0f, 4.0f / 3.0f, 0.1f, 100.0f);
+    glm::mat4 projMat = glm::perspective(45.0f, 4.0f / 3.0f, 0.1f, 200.0f);
     
     // final MVP transform
     glm::mat4 mvpMat = projMat * viewMat * modelMat;
