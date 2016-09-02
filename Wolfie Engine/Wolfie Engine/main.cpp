@@ -41,8 +41,8 @@ int main(void)
     
     // View matrix
     glm::mat4 viewMat = glm::lookAt(
-                                    glm::vec3(10,400,90), // Camera in World Space
-                                    glm::vec3(10,400,0), // and looks at the origin
+                                    glm::vec3(10,20,10), // Camera in World Space
+                                    glm::vec3(10,90,0), // and looks at the origin
                                     glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
                                     );
     
@@ -75,7 +75,7 @@ int main(void)
     Group* group = new Group(modelMat);
     
     
-    for(int i = 555, j = 0;i > 0;i -= 2, j++)
+    for(int i = 55, j = 0;i > 0;i -= 2, j++)
     {
         group->add(new Sprite(
                               glm::vec3(j, j, 0.0f),
@@ -88,7 +88,7 @@ int main(void)
     // add the big sprite to super group
     groupSuper->add(new Sprite(
                                glm::vec3(0.0, 0.0f, 0.0f),
-                               glm::vec2(600, 600),
+                               glm::vec2(60, 60),
                                glm::vec4(1.0f, dist(gen), dist(gen), 1.0f)
                                ));
     
