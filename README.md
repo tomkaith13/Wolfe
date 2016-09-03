@@ -3,10 +3,10 @@ A game engine written using openGL using Xcode.
 The programming language is C++11.
 
 Prequisites:
-- GLFW
+- GLFW 
 - GLEW
 - GLM
-- stb_image.h
+- stb_image.h (included in the project)
 
 How to setup :
 
