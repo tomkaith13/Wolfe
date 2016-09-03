@@ -34,6 +34,9 @@
 #define VERTEX_SHADER_SOURCE "/Users/bibinthomas/Wolfie Game Engine/Wolfie Engine/Wolfie Engine/Engine/Shader Sources/vertex.shader"
 #define FRAGMENT_SHADER_SOURCE "/Users/bibinthomas/Wolfie Game Engine/Wolfie Engine/Wolfie Engine/Engine/Shader Sources/frag.shader"
 
+//Texture Location
+#define TEXTURE_IMG "/Users/bibinthomas/Wolfie Game Engine/Wolfie Engine/Wolfie Engine/Textures/sample_texture.jpg"
+
 
 
 
