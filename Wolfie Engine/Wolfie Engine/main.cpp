@@ -13,9 +13,9 @@
 #include <random>
 
 //adding stb_image support
-// This needs to be done in a C/C++ file according to the readme specified in  stb_image.h
-#define STB_IMAGE_IMPLEMENTATION
-#include "stb_image.h"
+
+//#define STB_IMAGE_IMPLEMENTATION
+//#include "stb_image.h"
 
 #define FPS_VIEWER 1
 
@@ -40,12 +40,15 @@ int main(void)
         return -1;
     }
     
+    /*
     //Texture file loading
     int textureWidth, textureHeight, textureComponentNum;
     unsigned char* image = stbi_load(TEXTURE_IMG, &textureWidth, &textureHeight, &textureComponentNum, 0);
     
     std::cout<<"width:"<<textureWidth<<" height:"<<textureHeight<<" comp num:"<<textureComponentNum<<std::endl;
     stbi_image_free(image);
+     
+     */
 
     // Transformation Calculations
     //model matrix

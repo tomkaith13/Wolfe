@@ -22,6 +22,7 @@
 #include "Timer.h"
 #include "TileLayer.h"
 #include "Group.h"
+#include "Texture2D.h"
 
 //glm headers
 #include <glm/glm.hpp>
