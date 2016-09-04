@@ -59,6 +59,7 @@ void VertexArray::addVertexDataBuffer(Buffer& VDBO, int vertexIndex, int colorIn
     glVertexAttribPointer(vertexIndex, 4, GL_FLOAT, GL_FALSE, vertexDataSize, (const GLvoid*) 0);
     glVertexAttribPointer(colorIndex, 4, GL_FLOAT, GL_FALSE, vertexDataSize, (const GLvoid*) (4 * sizeof(GLfloat)));
     
+    
     VDBO.unbind();
     unbind();
     glDisableVertexAttribArray(vertexIndex);

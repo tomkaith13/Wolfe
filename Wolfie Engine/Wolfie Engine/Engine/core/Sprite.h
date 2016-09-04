@@ -17,8 +17,8 @@ public:
     
     Sprite(glm::vec3 pos, glm::vec2 size, glm::vec4 color) :
         Renderable2D(pos, size, color) { };
-    inline const glm::vec3 getPosition() { return Renderable2D::getPosition(); }
-    inline const glm::vec2 getSize() { return Renderable2D::getSize(); }
-    inline const glm::vec4 getColor() { return Renderable2D::getColor(); }
+    //inline const glm::vec3& getPosition() { return Renderable2D::getPosition(); }
+    //inline const glm::vec2& getSize() { return Renderable2D::getSize(); }
+    //inline const glm::vec4& getColor() { return Renderable2D::getColor(); }
 };
 #endif /* SPRITE_H */

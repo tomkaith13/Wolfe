@@ -47,9 +47,9 @@ public:
         mIndices[5] = 2;
     };
     
-    inline const glm::vec3 getPosition() { return mPosition;}
-    inline const glm::vec2 getSize() { return mSize;}
-    inline const glm::vec4 getColor() { return mColor;}
+    inline const glm::vec3& getPosition() { return mPosition;}
+    inline const glm::vec2& getSize() { return mSize;}
+    inline const glm::vec4& getColor() { return mColor;}
     inline GLuint* getIndices() { return mIndices; }
     
     virtual void submit(Renderer2D* renderer)
