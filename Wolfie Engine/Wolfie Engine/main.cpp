@@ -38,17 +38,7 @@ int main(void)
     {
         std::cout<<"Shader compilation issues"<<std::endl;
         return -1;
-    }
-    
-    /*
-    //Texture file loading
-    int textureWidth, textureHeight, textureComponentNum;
-    unsigned char* image = stbi_load(TEXTURE_IMG, &textureWidth, &textureHeight, &textureComponentNum, 0);
-    
-    std::cout<<"width:"<<textureWidth<<" height:"<<textureHeight<<" comp num:"<<textureComponentNum<<std::endl;
-    stbi_image_free(image);
-     
-     */
+    }    
 
     // Transformation Calculations
     //model matrix
