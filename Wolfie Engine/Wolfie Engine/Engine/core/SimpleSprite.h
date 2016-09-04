@@ -44,9 +44,9 @@ public:
     inline VertexArray* getVAO() { return mVao;}
     inline Buffer* getVBO() { return mVbo;}
     inline ElementBuffer* getEBO() { return mEbo;}
-    inline const glm::vec3 getPosition() { return Renderable2D::getPosition();}
-    inline const glm::vec2 getSize() { return Renderable2D::getSize();}
-    inline const glm::vec4 getColor() { return Renderable2D::getColor();}   
+    inline const glm::vec3& getPosition() { return Renderable2D::getPosition();}
+    inline const glm::vec2& getSize() { return Renderable2D::getSize();}
+    inline const glm::vec4& getColor() { return Renderable2D::getColor();}
     
 };
 #endif /* SIMPLESPRITE_H */
