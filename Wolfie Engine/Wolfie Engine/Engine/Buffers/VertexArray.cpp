@@ -8,8 +8,6 @@
 
 #include "VertexArray.h"
 
-
-
 VertexArray::VertexArray()
 {
     glGenVertexArrays(1, &mVaoID);
@@ -65,6 +63,22 @@ void VertexArray::addVertexDataBuffer(Buffer& VDBO, int vertexIndex, int colorIn
     glDisableVertexAttribArray(vertexIndex);
     glDisableVertexAttribArray(colorIndex);
 
+}
+
+void VertexArray::addSingleAttribFromBuffer(Buffer& VDBO, int index, int indexSize, short vertexDataSize, std::size_t startLocation)
+{
+
+    bind();
+    VDBO.bind();
+    
+    glEnableVertexAttribArray(index);
+    glVertexAttribPointer(index, indexSize, GL_FLOAT, GL_FALSE, vertexDataSize, (const GLvoid*) (startLocation));
+    
+    
+    VDBO.unbind();
+    unbind();
+    glDisableVertexAttribArray(index);
+    
 }
 
 

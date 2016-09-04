@@ -27,6 +27,7 @@ public:
     
     void addVertexBuffer(GLuint vapIndex, GLsizei stride, Buffer& vbo);
     void addVertexDataBuffer(Buffer& VDBO, int vertexIndex, int colorIndex, short vertexDataSize);
+    void addSingleAttribFromBuffer(Buffer& VDBO, int index, int indexSize, short vertexDataSize, std::size_t startLocation);
 };
 
 
