@@ -46,6 +46,11 @@ void BatchRenderer::init()
                                     4,
                                     VERTEX_DATA_SIZE,
                                     offsetof(struct VertexData, color));
+    mVAO->addSingleAttribFromBuffer(*mVDBO,
+                                    TEXTURE_ATTRIB_LOCATION,
+                                    2,
+                                    VERTEX_DATA_SIZE,
+                                    offsetof(struct VertexData, uv));
         
     /*
      
@@ -129,6 +134,7 @@ void BatchRenderer::submit(Renderable2D* renderable) {
     else
         mVdata->position =   mCurrTransformMat * glm::vec4(spritePos, 1.0);
     mVdata->color = spriteColor;
+    mVdata->uv = glm::vec2(0.0, 0.0);
     mVdata++;
     
     //Point B
@@ -137,6 +143,7 @@ void BatchRenderer::submit(Renderable2D* renderable) {
     else
         mVdata->position = mCurrTransformMat * glm::vec4(glm::vec3(spritePos.x, spritePos.y + spriteSize.y, spritePos.z), 1.0);
     mVdata->color = spriteColor;
+    mVdata->uv = glm::vec2(0.0, 1.0);
     mVdata++;
     
     //Point C
@@ -145,6 +152,7 @@ void BatchRenderer::submit(Renderable2D* renderable) {
     else
         mVdata->position = mCurrTransformMat * glm::vec4(glm::vec3(spritePos.x + spriteSize.x, spritePos.y, spritePos.z), 1.0);
     mVdata->color = spriteColor;
+    mVdata->uv = glm::vec2(1.0, 0.0);
     mVdata++;
     
     //Point D
@@ -153,6 +161,7 @@ void BatchRenderer::submit(Renderable2D* renderable) {
     else
         mVdata->position = mCurrTransformMat * glm::vec4(glm::vec3(spritePos.x + spriteSize.x, spritePos.y + spriteSize.y, spritePos.z), 1.0);
     mVdata->color = spriteColor;
+    mVdata->uv = glm::vec2(1.0, 1.0);
     mVdata++;
     
     mIndexCount += 6;

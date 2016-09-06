@@ -37,6 +37,7 @@
 
 //Texture Location
 #define TEXTURE_IMG "/Users/bibinthomas/Wolfie Game Engine/Wolfie Engine/Wolfie Engine/Textures/sample_texture.jpg"
+#define WALL_IMG "/Users/bibinthomas/Wolfie Game Engine/Wolfie Engine/Wolfie Engine/Textures/wall.jpg"
 
 
 

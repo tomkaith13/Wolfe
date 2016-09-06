@@ -22,6 +22,7 @@ Texture2D::Texture2D(const char* filename)
         std::cout<<"stbi_load failed!!"<<std::endl;
         return;
     }
+   
     glGenTextures(1, &mTextureID);
 }
 
@@ -30,9 +31,12 @@ Texture2D::Texture2D(const char* filename)
 void Texture2D::generate()
 {
     
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, mTextureWidth, mTextureHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, mTextureData);
-    glGenerateMipmap(GL_TEXTURE_2D);
     bind();
+    if (mTextureCompNum == 3)
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, mTextureWidth, mTextureHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, mTextureData);
+    else
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, mTextureWidth, mTextureHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, mTextureData);
+    glGenerateMipmap(GL_TEXTURE_2D);
     
 }
 
