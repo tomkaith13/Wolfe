@@ -26,7 +26,8 @@ void Shader::load()
     mVertexShader = glCreateShader(GL_VERTEX_SHADER);
     GLint mVertexShaderCompileStatus = 0;
     
-    const char* mVertexShaderSource = file_reader(mVertexShaderFileName).c_str();
+    std::string vShaderText = file_reader(mVertexShaderFileName);
+    const char* mVertexShaderSource = vShaderText.c_str();
     
     glShaderSource(mVertexShader, 1, &mVertexShaderSource, NULL);
     glCompileShader(mVertexShader);
@@ -52,7 +53,8 @@ void Shader::load()
     mFragShader = glCreateShader(GL_FRAGMENT_SHADER);
     GLint mFragShaderCompileStatus = 0;
     
-    const char* mFragShaderSource = file_reader(mFragShaderFileName).c_str();
+    std::string fShaderText = file_reader(mFragShaderFileName);
+    const char* mFragShaderSource = fShaderText.c_str();
     glShaderSource(mFragShader, 1, &mFragShaderSource, NULL);
     glCompileShader(mFragShader);
     
