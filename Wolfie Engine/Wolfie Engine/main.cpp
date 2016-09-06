@@ -12,11 +12,6 @@
 #include <chrono>
 #include <random>
 
-//adding stb_image support
-
-//#define STB_IMAGE_IMPLEMENTATION
-//#include "stb_image.h"
-
 #define FPS_VIEWER 1
 
 int main(void)

@@ -79,8 +79,6 @@
 		0346F2981D68150600A28BC7 /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sprite.h; path = "Wolfie Engine/Engine/core/Sprite.h"; sourceTree = "<group>"; };
 		0346F2991D68150600A28BC7 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Window.cpp; path = "Wolfie Engine/Engine/core/Window.cpp"; sourceTree = "<group>"; };
 		0346F29A1D68150600A28BC7 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Window.h; path = "Wolfie Engine/Engine/core/Window.h"; sourceTree = "<group>"; };
-		0346F2A21D68163600A28BC7 /* frag.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = frag.shader; path = "Wolfie Engine/Engine/Shader Sources/frag.shader"; sourceTree = "<group>"; };
-		0346F2A31D68163600A28BC7 /* vertex.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = vertex.shader; path = "Wolfie Engine/Engine/Shader Sources/vertex.shader"; sourceTree = "<group>"; };
 		0346F2A51D68166A00A28BC7 /* fileutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fileutils.cpp; path = "Wolfie Engine/Engine/Utils/fileutils.cpp"; sourceTree = "<group>"; };
 		0346F2A61D68166A00A28BC7 /* fileutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fileutils.h; path = "Wolfie Engine/Engine/Utils/fileutils.h"; sourceTree = "<group>"; };
 		0346F2A71D68166A00A28BC7 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = "Wolfie Engine/Engine/Utils/Timer.cpp"; sourceTree = "<group>"; };
@@ -200,8 +198,6 @@
 		0346F2A41D68163900A28BC7 /* shader program */ = {
 			isa = PBXGroup;
 			children = (
-				0346F2A21D68163600A28BC7 /* frag.shader */,
-				0346F2A31D68163600A28BC7 /* vertex.shader */,
 			);
 			name = "shader program";
 			sourceTree = "<group>";
