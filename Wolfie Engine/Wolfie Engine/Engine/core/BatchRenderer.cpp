@@ -123,8 +123,6 @@ void BatchRenderer::submit(Renderable2D* renderable) {
     
     identityOptmize = (mCurrTransformMat == glm::mat4(1.0f))? true : false;
     
-    
-    
     // Point A
     if (identityOptmize)
         mVdata->position = glm::vec4(spritePos, 1.0);
@@ -186,4 +184,14 @@ void BatchRenderer::end()
     glUnmapBuffer(GL_ARRAY_BUFFER);
     mVDBO->unbind();
 
+}
+
+/*
+ * free up Vertex Array Obj, Vertex Data Buffer Obj and Element Buffer Obj
+ */
+BatchRenderer::~BatchRenderer()
+{
+    delete mVAO;
+    delete mVDBO;
+    delete mEBO;
 }
