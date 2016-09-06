@@ -23,6 +23,7 @@
 
 #define VERTEX_ATTRIB_LOCATION 0
 #define COLOR_ATTRIB_LOCATION  1
+#define TEXTURE_ATTRIB_LOCATION 2
 
 
 /* 
@@ -32,7 +33,6 @@
  Rendererable's Vertex Data to it
  
  */
-
 
 class BatchRenderer : public Renderer2D
 {

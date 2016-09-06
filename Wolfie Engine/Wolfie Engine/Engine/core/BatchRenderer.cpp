@@ -8,12 +8,21 @@
 
 #include "BatchRenderer.h"
 
-
+/*
+ * Constructor which calls nothing, internally invokes init()
+ */
 BatchRenderer::BatchRenderer()
 {
     init();
 }
 
+
+/*
+ * init() is the one who creates the Vertex Array Object, pushes the initial identitiy Matrix to the vao.
+ * Then, we create VDBO (Vertex Data Buffer Object) and pass the Vertex Attribute to 
+ * VAO specifying how to use the attribute in VDBO. We also fill out the Element Buffer to 
+ * specify the indices of the
+ */
 void BatchRenderer::init()
 {
     GLuint indices[MAX_RENERABLE_INDICES];
@@ -21,9 +30,10 @@ void BatchRenderer::init()
     mVAO = new VertexArray();
     mIndexCount = 0;
     
+    // Top level identity matrix set
     mTransformMatVec.push_back(glm::mat4(1.0f));
     
-    
+    // Currently we support a MAX_RENDERABLE_SPRITES sprite buffer of Batched Renderering
     mVDBO = new Buffer(MAX_RENDERED_BUFF_SIZE, 0 , NULL, GL_DYNAMIC_DRAW, BATCHED_VERTEX_ATTRIB_BUFFER);
     
     mVAO->addSingleAttribFromBuffer(*mVDBO,
@@ -64,15 +74,25 @@ void BatchRenderer::init()
         offset += 4;
     }
     
+    //allocate the appropriate Element Buffer
     mEBO = new ElementBuffer(MAX_RENERABLE_INDICES, indices);    
 }
 
+
+/*
+ * begin() is where we the the GPU buffer to a local pointer
+ */
 void BatchRenderer::begin()
 {
     mVDBO->bind();
     mVdata = (VertexData*) glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY);
 }
 
+
+/*
+ * submit() is the function where we submit the renderable object to the renderer.
+ * This is where we fill in the pointer that is mmaped to the GPU.
+ */
 void BatchRenderer::submit(Renderable2D* renderable) {
     
     Sprite* renderedSprite = static_cast<Sprite*>(renderable);
@@ -138,10 +158,11 @@ void BatchRenderer::submit(Renderable2D* renderable) {
     mVdata++;
     
     mIndexCount += 6;
-    
-   
 }
 
+/*
+ * The actual draw call happens in flush()
+ */
 void BatchRenderer::flush()
 {
     
@@ -157,6 +178,9 @@ void BatchRenderer::flush()
     
 }
 
+/*
+ * end() is used to unmap the GPU buffer
+ */
 void BatchRenderer::end()
 {
     glUnmapBuffer(GL_ARRAY_BUFFER);

@@ -46,7 +46,7 @@ int main(void)
     
     // View matrix
     glm::mat4 viewMat = glm::lookAt(
-                                    glm::vec3(10,20,10), // Camera in World Space
+                                    glm::vec3(10,20,50), // Camera in World Space
                                     glm::vec3(10,20,0), // and looks at the origin
                                     glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
                                     );
@@ -111,6 +111,7 @@ int main(void)
     float time = 0;
 #endif
     
+    // The actual Game Loop
     while(!engineWindow.isClosed())
     {
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
