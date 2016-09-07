@@ -44,7 +44,7 @@ int main(void)
     
     // View matrix
     glm::mat4 viewMat = glm::lookAt(
-                                    glm::vec3(10,10,20), // Camera in World Space
+                                    glm::vec3(10,10,50), // Camera in World Space
                                     glm::vec3(10,10,0), // and looks at the origin
                                     glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
                                     );
@@ -78,6 +78,23 @@ int main(void)
     
     // add the super group to the layer
     spriteLayer->add(groupSuper);
+    
+    modelMat = glm::mat4(1.0f);
+    modelMat = glm::translate(modelMat, glm::vec3(21,21,0));
+    Group* groupSmall = new Group (modelMat);
+    
+    //Texture2D texture1(TEXTURE_IMG);
+    //texture1.generate();
+    
+    groupSmall->add(new Sprite(
+                               glm::vec3(0,0,0),
+                               glm::vec2(10, 10),
+                               glm::vec4(1,1,1,1)
+                    ));
+    
+    spriteLayer->add(groupSmall);
+    
+    
     
     
 #if FPS_VIEWER
