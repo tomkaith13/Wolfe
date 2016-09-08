@@ -103,7 +103,8 @@ void BatchRenderer::submit(Renderable2D* renderable) {
     Sprite* renderedSprite = static_cast<Sprite*>(renderable);
     glm::vec2 spriteSize = renderedSprite->getSize();
     glm::vec3 spritePos = renderedSprite->getPosition();
-    glm::vec4 spriteColor = renderedSprite->getColor();    
+    glm::vec4 spriteColor = renderedSprite->getColor();
+    const std::vector<glm::vec2>& uvVec = renderedSprite->getUV();
     
     /*
      And now for some artwork!! :)
@@ -134,7 +135,7 @@ void BatchRenderer::submit(Renderable2D* renderable) {
     else
         mVdata->position =   mCurrTransformMat * glm::vec4(spritePos, 1.0);
     mVdata->color = spriteColor;
-    mVdata->uv = glm::vec2(0.0, 0.0);
+    mVdata->uv = uvVec[0];
     mVdata++;
     
     //Point B
@@ -143,7 +144,7 @@ void BatchRenderer::submit(Renderable2D* renderable) {
     else
         mVdata->position = mCurrTransformMat * glm::vec4(glm::vec3(spritePos.x, spritePos.y + spriteSize.y, spritePos.z), 1.0);
     mVdata->color = spriteColor;
-    mVdata->uv = glm::vec2(0.0, 1.0);
+    mVdata->uv = uvVec[1];
     mVdata++;
     
     //Point C
@@ -152,7 +153,7 @@ void BatchRenderer::submit(Renderable2D* renderable) {
     else
         mVdata->position = mCurrTransformMat * glm::vec4(glm::vec3(spritePos.x + spriteSize.x, spritePos.y, spritePos.z), 1.0);
     mVdata->color = spriteColor;
-    mVdata->uv = glm::vec2(1.0, 0.0);
+    mVdata->uv = uvVec[2];
     mVdata++;
     
     //Point D
@@ -161,7 +162,7 @@ void BatchRenderer::submit(Renderable2D* renderable) {
     else
         mVdata->position = mCurrTransformMat * glm::vec4(glm::vec3(spritePos.x + spriteSize.x, spritePos.y + spriteSize.y, spritePos.z), 1.0);
     mVdata->color = spriteColor;
-    mVdata->uv = glm::vec2(1.0, 1.0);
+    mVdata->uv = uvVec[3];
     mVdata++;
     
     mIndexCount += 6;

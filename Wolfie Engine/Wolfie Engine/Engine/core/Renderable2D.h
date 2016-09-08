@@ -32,6 +32,7 @@ protected:
     glm::vec3 mPosition;
     glm::vec2 mSize;
     glm::vec4 mColor;
+    std::vector<glm::vec2> mVecUV;
     GLuint mIndices[6];
 
 
@@ -46,12 +47,18 @@ public:
         mIndices[3] = 1;
         mIndices[4] = 3;
         mIndices[5] = 2;
+        
+        mVecUV.push_back(glm::vec2(0,0));
+        mVecUV.push_back(glm::vec2(0,1));
+        mVecUV.push_back(glm::vec2(1,0));
+        mVecUV.push_back(glm::vec2(1,1));
     };
     
     inline const glm::vec3& getPosition() { return mPosition;}
     inline const glm::vec2& getSize() { return mSize;}
     inline const glm::vec4& getColor() { return mColor;}
     inline GLuint* getIndices() { return mIndices; }
+    inline const std::vector<glm::vec2>& getUV() { return mVecUV; }
     
     virtual void submit(Renderer2D* renderer)
     {
