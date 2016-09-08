@@ -9,5 +9,5 @@ void main()
 {
 gl_Position =  mvp * position;
 color_out = color_in;
-uv_coords = uv;
+uv_coords = vec2(uv.x, 1.0f - uv.y);
 }
