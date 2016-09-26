@@ -1,6 +1,7 @@
 #version 330 core
 in vec4 color_out;
 in vec2 uv_coords;
+in float frag_tid;
 out vec4 color;
 uniform sampler2D ourTexture;
 void main()
