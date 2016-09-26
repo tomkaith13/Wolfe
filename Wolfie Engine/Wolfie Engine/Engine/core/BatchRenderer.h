@@ -9,11 +9,13 @@
 #ifndef BATCHRENDERER_H
 #define BATCHRENDERER_H
 
+#include <vector>
 #include "Renderer2D.h"
 #include "VertexArray.h"
 #include "Buffer.h"
 #include "ElementBuffer.h"
 #include "Sprite.h"
+#include "Texture2D.h"
 
 //Batch Renderer known limits
 #define MAX_RENDERABLE_SPRITES 65000
@@ -21,9 +23,13 @@
 #define MAX_RENDERED_BUFF_SIZE MAX_RENDERABLE_SPRITES * VERTEX_DATA_SIZE * 4
 #define MAX_RENERABLE_INDICES 6 * MAX_RENDERABLE_SPRITES
 
+//Texture Vector limits
+#define MAX_TEXTURE_VEC 32
+
 #define VERTEX_ATTRIB_LOCATION 0
 #define COLOR_ATTRIB_LOCATION  1
 #define TEXTURE_ATTRIB_LOCATION 2
+#define TEXTURE_ID_ATTRIB_LOCATION 3
 
 
 /* 
@@ -42,6 +48,9 @@ class BatchRenderer : public Renderer2D
     
     VertexData* mVdata;
     unsigned int mIndexCount;
+    
+    // Vector for textures
+    std::vector<const Texture2D*> mTextureVec;
     
     void init();
     

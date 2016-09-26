@@ -17,6 +17,10 @@ public:
     
     Sprite(glm::vec3 pos, glm::vec2 size, glm::vec4 color) :
         Renderable2D(pos, size, color) { };
+    
+    //Adding support for Texture and Color in a sprite
+    Sprite(glm::vec3 pos, glm::vec2 size, glm::vec4 color, Texture2D* tObj) :
+    Renderable2D(pos, size, color, tObj) { };
     //inline const glm::vec3& getPosition() { return Renderable2D::getPosition(); }
     //inline const glm::vec2& getSize() { return Renderable2D::getSize(); }
     //inline const glm::vec4& getColor() { return Renderable2D::getColor(); }

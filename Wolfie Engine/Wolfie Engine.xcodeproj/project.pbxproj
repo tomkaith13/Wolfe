@@ -81,6 +81,8 @@
 		0346F2A61D68166A00A28BC7 /* fileutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fileutils.h; path = "Wolfie Engine/Engine/Utils/fileutils.h"; sourceTree = "<group>"; };
 		0346F2A71D68166A00A28BC7 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = "Wolfie Engine/Engine/Utils/Timer.cpp"; sourceTree = "<group>"; };
 		0346F2A81D68166A00A28BC7 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Timer.h; path = "Wolfie Engine/Engine/Utils/Timer.h"; sourceTree = "<group>"; };
+		03627E451D98C8C000BE4D79 /* frag.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = frag.shader; path = "Wolfie Engine/Engine/Shader Sources/frag.shader"; sourceTree = "<group>"; };
+		03627E461D98C8C000BE4D79 /* vertex.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = vertex.shader; path = "Wolfie Engine/Engine/Shader Sources/vertex.shader"; sourceTree = "<group>"; };
 		038BB0851D6A900F00FEBDD0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		039F61161D7A00030088FA0A /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stb_image.h; path = "Wolfie Engine/External Library/stb/stb_image.h"; sourceTree = "<group>"; };
 		039F61171D7A0E360088FA0A /* sample_texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sample_texture.jpg; path = "Wolfie Engine/Textures/sample_texture.jpg"; sourceTree = "<group>"; };
@@ -196,6 +198,8 @@
 		0346F2A41D68163900A28BC7 /* shader program */ = {
 			isa = PBXGroup;
 			children = (
+				03627E451D98C8C000BE4D79 /* frag.shader */,
+				03627E461D98C8C000BE4D79 /* vertex.shader */,
 			);
 			name = "shader program";
 			sourceTree = "<group>";

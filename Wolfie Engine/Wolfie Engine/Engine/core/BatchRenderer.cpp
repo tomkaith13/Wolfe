@@ -51,6 +51,11 @@ void BatchRenderer::init()
                                     2,
                                     VERTEX_DATA_SIZE,
                                     offsetof(struct VertexData, uv));
+    mVAO->addSingleAttribFromBuffer(*mVDBO,
+                                    TEXTURE_ID_ATTRIB_LOCATION,
+                                    1,
+                                    VERTEX_DATA_SIZE,
+                                    offsetof(struct VertexData, tid));
         
     /*
      
@@ -105,6 +110,35 @@ void BatchRenderer::submit(Renderable2D* renderable) {
     glm::vec3 spritePos = renderedSprite->getPosition();
     glm::vec4 spriteColor = renderedSprite->getColor();
     const std::vector<glm::vec2>& uvVec = renderedSprite->getUV();
+    bool textureFound = false;
+    
+    const Texture2D* spriteTexture = renderedSprite->getTextureObj();
+    GLuint spriteTid = renderedSprite->getTid();
+    float spriteTidLoc;
+    
+    if (spriteTid > 0.0) {
+        
+        //first we search if this the texture vector
+        for (int i =0; i < MAX_TEXTURE_VEC; i++) {
+            
+            if (mTextureVec[i]->getTid() == spriteTid) {
+                spriteTidLoc = (float) i;
+                textureFound = true;
+                break;
+            }
+        }
+        
+        if (!textureFound) {
+            if (mTextureVec.size() < MAX_TEXTURE_VEC) {
+                spriteTidLoc = (float) mTextureVec.size();
+                mTextureVec.push_back(spriteTexture);
+            } else {
+                std::cout<<"Error: Unable to add more than "
+                    << MAX_TEXTURE_VEC<<" textures in this renderer"
+                    <<std::endl;
+            }
+        }
+    }
     
     /*
      And now for some artwork!! :)
@@ -136,6 +170,7 @@ void BatchRenderer::submit(Renderable2D* renderable) {
         mVdata->position =   mCurrTransformMat * glm::vec4(spritePos, 1.0);
     mVdata->color = spriteColor;
     mVdata->uv = uvVec[0];
+    mVdata->tid = spriteTidLoc;
     mVdata++;
     
     //Point B
@@ -145,6 +180,7 @@ void BatchRenderer::submit(Renderable2D* renderable) {
         mVdata->position = mCurrTransformMat * glm::vec4(glm::vec3(spritePos.x, spritePos.y + spriteSize.y, spritePos.z), 1.0);
     mVdata->color = spriteColor;
     mVdata->uv = uvVec[1];
+    mVdata->tid = spriteTidLoc;
     mVdata++;
     
     //Point C
@@ -154,6 +190,7 @@ void BatchRenderer::submit(Renderable2D* renderable) {
         mVdata->position = mCurrTransformMat * glm::vec4(glm::vec3(spritePos.x + spriteSize.x, spritePos.y, spritePos.z), 1.0);
     mVdata->color = spriteColor;
     mVdata->uv = uvVec[2];
+    mVdata->tid = spriteTidLoc;
     mVdata++;
     
     //Point D
@@ -163,6 +200,7 @@ void BatchRenderer::submit(Renderable2D* renderable) {
         mVdata->position = mCurrTransformMat * glm::vec4(glm::vec3(spritePos.x + spriteSize.x, spritePos.y + spriteSize.y, spritePos.z), 1.0);
     mVdata->color = spriteColor;
     mVdata->uv = uvVec[3];
+    mVdata->tid = spriteTidLoc;
     mVdata++;
     
     mIndexCount += 6;
@@ -173,6 +211,10 @@ void BatchRenderer::submit(Renderable2D* renderable) {
  */
 void BatchRenderer::flush()
 {
+    for (int i = 0; i < mTextureVec.size(); i++) {
+        glActiveTexture(GL_TEXTURE0 + i);
+        mTextureVec[i]->bind();
+    }
     
     mVAO->bind();
     mEBO->bind();

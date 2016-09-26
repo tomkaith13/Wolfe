@@ -25,8 +25,9 @@ public:
     
     Texture2D(const char* filename);
     void generate();
-    void bind();
+    void bind() const;
     void setParamater();
+    inline const GLuint getTid() const{ return mTextureID; }
     ~Texture2D();
     
 };

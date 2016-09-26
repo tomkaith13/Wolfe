@@ -30,7 +30,7 @@ Texture2D::Texture2D(const char* filename)
 // and also generates mipmaps.
 void Texture2D::generate()
 {
-    glActiveTexture(GL_TEXTURE0);
+    //glActiveTexture(GL_TEXTURE0);
     bind();
     if (mTextureCompNum == 3)
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, mTextureWidth, mTextureHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, mTextureData);
@@ -41,7 +41,7 @@ void Texture2D::generate()
 }
 
 
-void Texture2D::bind()
+void Texture2D::bind() const
 {
     glBindTexture(GL_TEXTURE_2D, mTextureID);
 }
