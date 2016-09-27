@@ -129,14 +129,13 @@ void BatchRenderer::submit(Renderable2D* renderable) {
         }
         
         if (!textureFound) {
-            if (mTextureVec.size() < MAX_TEXTURE_VEC) {
-                spriteTidLoc = (float) mTextureVec.size();
-                mTextureVec.push_back(spriteTexture);
-            } else {
-                std::cout<<"Error: Unable to add more than "
-                    << MAX_TEXTURE_VEC<<" textures in this renderer"
-                    <<std::endl;
+            if (mTextureVec.size() >= MAX_TEXTURE_VEC) {
+                end();
+                flush();
+                begin();
             }
+            spriteTidLoc = (float) mTextureVec.size();
+            mTextureVec.push_back(spriteTexture);
         }
     }
     
@@ -225,7 +224,10 @@ void BatchRenderer::flush()
     mVAO->unbind();
     mIndexCount = 0;
     
-    
+    for (int i = 0; i < mTextureVec.size(); i++) {
+        mTextureVec[i]->unbind();
+    }
+    mTextureVec.clear();
 }
 
 /*
