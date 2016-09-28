@@ -1,10 +1,11 @@
 //
-//  main.cpp - This file exists merely as a way to show the user how to use the functions created by
-//              the engine's APIs.
-//  Wolfie
+//  multi_texture_sample.cpp
+//  Wolfie Engine
 //
-//  Created by BIBIN THOMAS on 7/11/16.
-//  Copyright © 2016 BIBIN THOMAS. All rights reserved.
+//  Created by BIBIN THOMAS on 9/28/16.
+//  Copyright © 2016 tomkaith13. All rights reserved.
+//
+
 //
 
 #include "Wolfie.h"
@@ -14,7 +15,7 @@
 
 #define FPS_VIEWER 1
 
-int main(void)
+int multiple_texture_sample(void)
 {
     //GLuint shaderProgID;
     Window engineWindow("Wolfie", 600, 800);
@@ -34,7 +35,7 @@ int main(void)
         std::cout<<"Shader compilation issues"<<std::endl;
         return -1;
     }
-       
+    
     
     Texture2D* texture1 = new Texture2D(WALL_IMG);
     Texture2D* texture2 = new Texture2D(TEXTURE_IMG);
@@ -56,7 +57,7 @@ int main(void)
     
     // final MVP transform
     glm::mat4 mvpMat = projMat * viewMat * modelMat;
-
+    
     //Randomization logic for sprite colors using <chrono> and <random>
     std::chrono::system_clock::time_point sysTimePoint = std::chrono::system_clock::now();
     double seed = sysTimePoint.time_since_epoch().count();

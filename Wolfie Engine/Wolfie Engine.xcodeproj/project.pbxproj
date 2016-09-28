@@ -83,6 +83,7 @@
 		0346F2A81D68166A00A28BC7 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Timer.h; path = "Wolfie Engine/Engine/Utils/Timer.h"; sourceTree = "<group>"; };
 		03627E451D98C8C000BE4D79 /* frag.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = frag.shader; path = "Wolfie Engine/Engine/Shader Sources/frag.shader"; sourceTree = "<group>"; };
 		03627E461D98C8C000BE4D79 /* vertex.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = vertex.shader; path = "Wolfie Engine/Engine/Shader Sources/vertex.shader"; sourceTree = "<group>"; };
+		0380CBB81D9C4C890013C823 /* multi_texture_sample.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = multi_texture_sample.cpp; path = "Wolfie Engine/Sample/multi_texture_sample.cpp"; sourceTree = "<group>"; };
 		038BB0851D6A900F00FEBDD0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		039F61161D7A00030088FA0A /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stb_image.h; path = "Wolfie Engine/External Library/stb/stb_image.h"; sourceTree = "<group>"; };
 		039F61171D7A0E360088FA0A /* sample_texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sample_texture.jpg; path = "Wolfie Engine/Textures/sample_texture.jpg"; sourceTree = "<group>"; };
@@ -262,6 +263,7 @@
 				0308114C1D75661E00DED2F4 /* layer_usage_test.cpp */,
 				03EF11D31D77AFAD006D0B2F /* group_usage_test.cpp */,
 				03050E5C1D811B5A00A3969C /* singe_texture_usage.cpp */,
+				0380CBB81D9C4C890013C823 /* multi_texture_sample.cpp */,
 			);
 			name = "test-samples";
 			sourceTree = "<group>";
