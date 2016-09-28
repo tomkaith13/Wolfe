@@ -114,14 +114,16 @@ void BatchRenderer::submit(Renderable2D* renderable) {
     
     const Texture2D* spriteTexture = renderedSprite->getTextureObj();
     GLuint spriteTid = renderedSprite->getTid();
-    float spriteTidLoc;
+    float spriteTidLoc = NO_TEXTURE;
     
-    if (spriteTid > 0.0) {
+    if (spriteTid > 0) {
         
         //first we search if this the texture vector
-        for (int i =0; i < MAX_TEXTURE_VEC; i++) {
+        for (int i =0; i < mTextureVec.size(); i++) {
             
             if (mTextureVec[i]->getTid() == spriteTid) {
+                
+                //this should be float since it is passed to the shader
                 spriteTidLoc = (float) i;
                 textureFound = true;
                 break;
@@ -212,7 +214,7 @@ void BatchRenderer::flush()
 {
     for (int i = 0; i < mTextureVec.size(); i++) {
         glActiveTexture(GL_TEXTURE0 + i);
-        mTextureVec[i]->bind();
+        mTextureVec[i]->generate();
     }
     
     mVAO->bind();
@@ -224,9 +226,12 @@ void BatchRenderer::flush()
     mVAO->unbind();
     mIndexCount = 0;
     
+    
     for (int i = 0; i < mTextureVec.size(); i++) {
+        glActiveTexture(GL_TEXTURE0 + i);
         mTextureVec[i]->unbind();
     }
+    
     mTextureVec.clear();
 }
 

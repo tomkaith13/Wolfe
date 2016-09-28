@@ -31,6 +31,9 @@
 #define TEXTURE_ATTRIB_LOCATION 2
 #define TEXTURE_ID_ATTRIB_LOCATION 3
 
+//Texture slot constants
+#define NO_TEXTURE -1.0
+
 
 /* 
  This is class which defined the Batch Renderer.

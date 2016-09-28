@@ -15,8 +15,15 @@ Layer::Layer(Shader* shader,
         mLayerRenderer(renderer),
         mLayerMVPMat(mvpMat)
 {
+    //initialize texture arrays
+    GLint* textureArr = new GLint[TEXTURE_ARRAY_MAX];
+    
+    for (int i = 0; i < TEXTURE_ARRAY_MAX; i++)
+        textureArr[i] = i;
+    
     mLayerShader->enable();
     mLayerShader->setUniformMatrix4fv("mvp", mvpMat);
+    mLayerShader->setUniform1iv("TextureSamplerArr", TEXTURE_ARRAY_MAX, textureArr);
     mLayerShader->disable();
     
 }

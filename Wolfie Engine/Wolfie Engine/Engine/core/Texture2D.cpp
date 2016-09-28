@@ -28,7 +28,7 @@ Texture2D::Texture2D(const char* filename)
 
 // This texture2D function binds the texture as the currently bound texture
 // and also generates mipmaps.
-void Texture2D::generate()
+void Texture2D::generate() const
 {
     //glActiveTexture(GL_TEXTURE0);
     bind();

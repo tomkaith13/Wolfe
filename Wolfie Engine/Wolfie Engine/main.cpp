@@ -33,10 +33,12 @@ int main(void)
     {
         std::cout<<"Shader compilation issues"<<std::endl;
         return -1;
-    }    
+    }
+       
     
-    Texture2D texture(WALL_IMG);
-    texture.generate();
+    Texture2D* texture1 = new Texture2D(WALL_IMG);
+    Texture2D* texture2 = new Texture2D(TEXTURE_IMG);
+    //texture.generate();
     
     // Transformation Calculations
     //model matrix
@@ -76,7 +78,14 @@ int main(void)
         {
             groupSuper->add(new Sprite(glm::vec3(i,j,0),
                                        glm::vec2(5,5),
-                                       glm::vec4(1.0f, 1.0f, 1.0f, 1.0f))
+                                       glm::vec4(1.0f, 0.0f, 1.0f, 1.0f),
+                                       texture1)
+                            );
+            
+            groupSuper->add(new Sprite(glm::vec3(i+1,j+1,0),
+                                       glm::vec2(2,2),
+                                       glm::vec4(1.0f, 0.0f, 1.0f, 1.0f),
+                                       texture2)
                             );
             
         }
@@ -125,6 +134,8 @@ int main(void)
     }
     shObj.disableShader();
     engineWindow.close();
+    delete texture1;
+    delete texture2;
     
     return 0;
 }

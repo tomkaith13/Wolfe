@@ -170,3 +170,10 @@ void Shader::setUniformVec4(const char* name, glm::vec4 vec)
                        glm::value_ptr(vec));
 }
 
+void Shader::setUniform1iv(const char* name, GLsizei count, const GLint* vec)
+{
+    glUniform1iv(getUniformLocation(name),
+                 count,
+                 vec);
+}
+

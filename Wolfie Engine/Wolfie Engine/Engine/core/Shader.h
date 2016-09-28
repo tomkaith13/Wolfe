@@ -45,6 +45,7 @@ public:
     void disableShader();
 
     void setUniformMatrix4fv(const char* name, const glm::mat4& mat);
+    void setUniform1iv(const char* name, GLsizei count, const GLint* vec);
     void setUniformVec4(const char*, glm::vec4);
 };
 

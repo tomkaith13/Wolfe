@@ -24,7 +24,7 @@ class Texture2D
 public:
     
     Texture2D(const char* filename);
-    void generate();
+    void generate() const;
     void bind() const;
     void unbind() const;
     void setParamater();

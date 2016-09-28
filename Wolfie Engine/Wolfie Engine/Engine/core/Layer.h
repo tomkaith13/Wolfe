@@ -22,6 +22,8 @@
  * calculation on the CPU.
  */
 
+#define TEXTURE_ARRAY_MAX 16
+
 class Layer
 {
     Shader* mLayerShader;
