@@ -14,8 +14,8 @@ if (frag_tid >= 0.0)
 int tid = int (frag_tid);
 color = texture(TextureSamplerArr[tid], uv_coords);
 } else {
-//color = color_out;
-color = vec4(0.0, 1.0, 0.0, 0.0);
+color = color_out;
+//color = vec4(0.0, 1.0, 0.0, 0.0);
 
 }
 
