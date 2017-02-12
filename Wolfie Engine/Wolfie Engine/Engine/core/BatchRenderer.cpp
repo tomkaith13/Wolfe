@@ -224,7 +224,7 @@ void BatchRenderer::flush()
     
     mEBO->unbind();
     mVAO->unbind();
-    //mIndexCount = 0;
+    mIndexCount = 0;
     
     
     for (int i = 0; i < mTextureVec.size(); i++) {

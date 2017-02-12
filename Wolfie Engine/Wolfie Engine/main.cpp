@@ -76,19 +76,20 @@ int main(void)
     {
         for(int j=0; j< 100; j+=2)
         {
-            
+            /*
             groupSuper->add(new Sprite(glm::vec3(i,j,0),
                                        glm::vec2(1.75,1.75),
                                        glm::vec4(dist(gen), dist(gen), dist(gen), dist(gen))
                                        )
                             );
-            /*
+             */
+            
             groupSuper->add(new Sprite(glm::vec3(i,j,0),
                                        glm::vec2(5,5),
                                        glm::vec4(1.0f, 0.0f, 1.0f, 1.0f),
                                        texture1)
                             );
-            */
+            
             /*
             groupSuper->add(new Sprite(glm::vec3(i+1,j+1,0),
                                        glm::vec2(2,2),
