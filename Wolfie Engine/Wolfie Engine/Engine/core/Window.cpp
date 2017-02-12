@@ -68,7 +68,7 @@ Window::init() {
     for (int i=0;i< MOUSE_MAX; i++)
         mMouseMap[i] = false;
     
-    //glfwSwapInterval(0);
+    glfwSwapInterval(0);
     
     return 0;
 }
